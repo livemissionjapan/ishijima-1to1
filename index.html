@@ -117,6 +117,7 @@ table.goose{width:100%;table-layout:fixed;border-collapse:collapse;background:#f
 table.goose th,table.goose td{padding:16px 18px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
 table.goose tr:first-child th,table.goose tr:first-child td{border-top:0}
 table.goose th{width:32%;background:var(--sky);color:var(--navy);font-weight:700}
+table.goose th small{display:block;margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--blue)}
 /* referral */
 .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
 .tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;transition:.2s;font-family:var(--sans)}
@@ -277,7 +278,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
       <div class="card lift rv"><h3>社長本人の口から出る言葉</h3><ul class="clean quote"><li>「奥さんが経理をやっている」</li><li>「経理の人が辞めてしまって」</li><li>「経理はパートさん一人に任せてる」</li><li>「店舗を増やしたいけど、事務が回らない」</li><li>「試算表が3ヶ月遅れている」</li></ul></div>
       <div class="card lift rv d1"><h3>社長がふと漏らす、その手前の言葉</h3><ul class="clean quote"><li>「奥さんに余裕を作ってあげたいな」</li><li>「あの人にしか分からない仕事があるな」</li><li>「もう1店舗出したい」</li></ul></div>
       <div class="card lift rv d2"><h3>見ていて気づくこと</h3><ul class="clean"><li>社長が領収書を袋で持ってくる</li><li>社長が現場に入りっぱなしで、経営を考える時間がない</li><li>請求書をいまだに手で作っている</li></ul></div>
-      <div class="card lift rv d3"><h3>税理士の先生から</h3><ul class="clean quote"><li>「記帳までは手が回らない」</li><li>「キャパオーバーで受けられない」</li></ul></div>
+      <div class="card lift rv d3"><h3>税理士の先生から</h3><p class="note">記帳を手放したい先生</p><ul class="clean quote"><li>「記帳までは手が回らない」</li><li>「キャパオーバーで受けられない」</li></ul><p class="note" style="margin-top:10px">効率を上げたい先生（協業のご相談）</p><ul class="clean quote"><li>「人を増やさずに件数を増やしたい」</li><li>「AIを使いたいが、何から手をつければいいか」</li><li>「入力作業に人を取られている」</li></ul></div>
     </div>
   </div>
 </section>
@@ -285,7 +286,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 <!-- SERIOUS -->
 <section id="serious">
   <div class="wrap">
-    <div class="sec-head rv"><p class="en">How To Tell</p><h2><span class="ico">🔍</span>本気かどうかの見分け方</h2><p>上のフレーズが出たら、一歩だけ踏み込んでみてください。</p></div>
+    <div class="sec-head rv"><p class="en">How To Tell</p><h2><span class="ico">🔍</span>本気かどうかの見分け方</h2><p>「聞き逃してはならないフレーズ」が出たら、一歩だけ踏み込んでみてください。</p></div>
     <div class="q rv">「それ、いま一番困っているのは何ですか？」</div>
     <div class="grid2">
       <div class="card sign-yes rv"><h3>💡 本気のサイン</h3><p class="note">この状態なら、ぜひ私に繋いでください</p><ul class="clean"><li><b>痛みを具体的に話し始める</b> ― 「担当が今月末で辞める」「試算表が遅れて銀行に出せない」など、期限や固有名詞が出てくる</li><li><b>「いくらで、どこまでやってくれるの？」</b>と価格や範囲を聞いてくる</li><li><b>社長本人</b>が「自分の時間を経営に使いたい」と言っている</li></ul></div>
@@ -299,9 +300,11 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
   <div class="narrow">
     <div class="sec-head rv"><p class="en">Referral Sources</p><h2><span class="ico">🦢</span>金のガチョウ<span class="sub">繰り返し紹介が生まれる相手</span></h2></div>
     <table class="goose rv">
-      <tr><th>① 税理士</th><td>記帳代行の受け皿を探している事務所。<b>先生が「記帳までは手が回らない」と言った瞬間が出番</b>です（記帳代行、経理代行）</td></tr>
-      <tr><th>② 飲食店専門のデザイン・看板会社</th><td>店舗展開している会社と必ず接点があります</td></tr>
-      <tr><th>③ 食材卸</th><td>複数店舗の経営者と日常的に会っています</td></tr>
+      <tr><th>① 税理士<small>受け皿型</small></th><td>記帳代行の受け皿を探している事務所。<b>先生が「記帳までは手が回らない」と言った瞬間が出番</b>です（記帳代行、経理代行）</td></tr>
+      <tr><th>② 税理士<small>協業型・NEW</small></th><td><b>40代〜50代の先生</b>で、<b>人は増やしたくないが業務効率は上げたい</b>、<b>DX・AI化を進めたいけれどご自身では手が回っていない</b>事務所です。<br>いま、マネーフォワードやfreeeとAIエージェントをつないで、記帳業務そのものを自動化するサービスを立ち上げています。先生の仕事を取りにいく話ではなく、<b>事務所の中の作業を一緒に減らす協業のご提案</b>です。<br><b>「協業できそうな会社がありますよ」と会わせていただくだけで大丈夫</b>です。その先のご提案は、私からさせていただきます。</td></tr>
+      <tr><th>③ BNIディレクター<small>積極的に受けます・NEW</small></th><td>チャプターを横断して、毎週たくさんの経営者に会われている立場です。<b>ディレクターの方が私の営業マンのように動いてくださると、事業の伸び方がまったく変わります</b>。<br>逆に、現場が忙しすぎてBNIを断られてきた飲食店オーナーに対して、「経理を引き受ける人がいます」という提案の形をお渡しできます。<b>ディレクターの方との1to1は、いつでもお受けします。</b></td></tr>
+      <tr><th>④ 飲食店専門のデザイン・看板会社</th><td>店舗展開している会社と必ず接点があります</td></tr>
+      <tr><th>⑤ 食材卸</th><td>複数店舗の経営者と日常的に会っています</td></tr>
     </table>
   </div>
 </section>
@@ -313,7 +316,8 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     <div class="tabs rv">
       <button class="tab on" data-t="wife">奥様が経理をしている社長へ</button>
       <button class="tab" data-t="staff">担当者1名に任せている社長へ</button>
-      <button class="tab" data-t="tax">税理士の先生へ</button>
+      <button class="tab" data-t="tax">税理士の先生へ｜記帳を手放したい</button>
+      <button class="tab" data-t="taxai">税理士の先生へ｜AI・DXで協業</button>
     </div>
     <div class="panel on" id="p-wife">
       <p class="target"><b>ターゲット</b>：経理を奥様に任せている飲食店のオーナー社長（1店舗から対象）</p>
@@ -371,7 +375,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 石島さんをご紹介させていただきます。</pre></div>
     </div>
     <div class="panel" id="p-tax">
-      <p class="target"><b>ターゲット</b>：記帳代行を手放したい、またはキャパオーバーの税理士の先生</p>
+      <p class="target"><b>ターゲット</b>：記帳代行を手放したい、またはキャパオーバーの税理士の先生（＝<b>案件を渡していただく</b>お繋ぎ）</p>
       <div class="talk"><span class="tag">Opening</span><br>「記帳代行を手放したいけど、任せられる先がないという先生は多いんですよね。飲食店専門で受け皿になれる方がいるんですが、興味はありますか？」</div>
       <div class="msgbox"><button class="copy" data-copy="m-tax">📋 コピーする</button>
 <pre class="msg" id="m-tax">○○先生
@@ -390,8 +394,36 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 といったことがありましたら、私にお声がけください。
 石島さんをご紹介させていただきます。</pre></div>
     </div>
+    <div class="panel" id="p-taxai">
+      <p class="target"><b>ターゲット</b>：40代〜50代の税理士事務所の先生。人は増やしたくないが業務効率を上げたい／DX・AI化を進めたいが自分では進められていない（＝<b>会わせていただくだけ</b>のお繋ぎ。提案は石島がします）</p>
+      <div class="talk"><span class="tag">Opening</span><br>「人を増やさずに件数を増やしたい、という先生は多いんですよね。マネーフォワードやfreeeとAIをつないで、記帳の作業そのものを自動化している会社があるんですが、一度話を聞いてみませんか？」</div>
+      <div class="msgbox"><button class="copy" data-copy="m-taxai">📋 コピーする</button>
+<pre class="msg" id="m-taxai">○○先生
+
+いつもお世話になっております。
+
+先日、事務所の業務効率のお話をお聞きしました。
+人を増やさずに件数を増やしたい、AIも使っていきたいけれど何から手をつければいいか。
+同じお話は、他の先生からもよく伺います。
+そこで、その部分をご一緒できそうな方をご紹介できればと思います。
+
+その方は石島さんとおっしゃって、経理代行を10年やっておられます。
+いまは、マネーフォワードやfreeeといったツールとAIをつないで、
+記帳の作業そのものを自動化する仕組みを作っておられます。
+ご自身の会社でも、ITが得意ではないパートの方がAIで実務を回せるところまで
+作り込まれたそうです。
+
+先生のお仕事を取りにいく立場ではなく、
+事務所の中の作業を一緒に減らしていく、協業のご相談です。
+
+「入力作業に人を取られているな」
+「AIを入れたいが、自分では手が回らないな」
+
+そんなふうに思われることがありましたら、私にお声がけください。
+石島さんをおつなぎします。まずは情報交換から、とのことです。</pre></div>
+    </div>
     <div class="steps">
-      <div class="step rv"><b>1</b>上のフレーズが聞こえる</div>
+      <div class="step rv"><b>1</b>「聞き逃してはならないフレーズ」が聞こえる</div>
       <div class="step rv d1"><b>2</b>「いま一番困っているのは？」と一歩踏み込む</div>
       <div class="step rv d2"><b>3</b>お繋ぎ文を送る、または石島にひと声かける</div>
       <div class="step rv d3"><b>4</b>石島からご連絡し、まずお話を伺います。合わなければ、その場ではっきりお伝えします</div>

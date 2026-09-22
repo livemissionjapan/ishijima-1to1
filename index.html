@@ -208,6 +208,12 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
   table.prof th{width:32%}
   .q{font-size:20px}
 }
+.rally{list-style:none;padding:0;margin:8px 0 0}
+.rally li{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px;line-height:1.7}
+.rally li:last-child{border-bottom:0}
+.rally li b{color:var(--muted);font-size:12.5px;padding-top:4px}
+.rally li.me b{color:var(--orange)}
+.rally li.me span{color:var(--navy)}
 </style>
 </head>
 <body>
@@ -216,7 +222,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#"><span class="mark">L</span><b>石島 亮太</b><small>飲食店専門の経理代行</small></a>
-    <nav class="nav"><a href="#help">お役に立てる方</a><a href="#phrases">フレーズ</a><a href="#referral">お繋ぎ文</a><a href="#voices">お客様の声</a><a href="#sheets">1to1・GAINS</a><a href="#story">私のこと</a></nav>
+    <nav class="nav"><a href="#help">お役に立てる方</a><a href="#why">なぜ石島か</a><a href="#phrases">フレーズ</a><a href="#referral">お繋ぎ文</a><a href="#voices">お客様の声</a><a href="#sheets">1to1・GAINS</a><a href="#story">私のこと</a></nav>
     <a class="top-cta" href="#referral">お繋ぎ文をコピー</a>
   </div>
 </header>
@@ -247,7 +253,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
   <div class="wrap">
     <div class="stat rv"><b><span class="cnt" data-n="10">0</span><small>年</small></b><span class="lbl">経理代行歴<br>2016年開業</span></div>
     <div class="stat rv d1"><b><span class="cnt" data-n="24">0</span><small>社</small></b><span class="lbl">顧問先<br>社員3名・パート2名・外注3名</span></div>
-    <div class="stat rv d2"><b><span class="cnt" data-n="150">0</span><small>名</small></b><span class="lbl">飲食15店舗の会社<br>経理・総務・人事をまるごと</span></div>
+    <div class="stat rv d2"><b>7<small>→</small>15<small>店舗</small></b><span class="lbl">店が倍に増える間<br>本社の経理担当はゼロ人のまま</span></div>
     <div class="stat rv d3"><b><span class="cnt" data-n="200">0</span><small>名</small></b><span class="lbl">ラーメンチェーン直営20店舗＋FC20<br>経理代行＋資金繰り・財務</span></div>
   </div>
 </div>
@@ -261,10 +267,27 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
       <p class="big">経理を「奥様」か「担当者1名」に任せている会社</p>
       <ul class="clean">
         <li><b>1店舗から対象</b>です。規模は問いません</li>
+        <li><b>「2店舗目、考えたことある？」</b>に少しでも反応がある社長は、特に。数字を見れば、出せるかどうかが分かります</li>
         <li>ただし<b>社長が現場に出ている会社</b>に限ります（社長がデスクで数字を見ている会社は、私の出番がありません）</li>
         <li>決算をお願いしている<b>税理士の先生は、そのまま</b>で大丈夫です。先生の手前の、日々の実務を引き受けます</li>
       </ul>
       <div class="warn"><b>⚠️ お繋ぎいただきたいのは、社長ご本人です。</b><br>奥様やご担当者だけとお会いしても、決めるのは社長なので前に進みません。奥様から「大変で…」と聞いた場合は、<b>社長に会わせてもらうまでが1セット</b>です。</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="en">Why Me</p><h2><span class="ico">🍜</span>なぜ、石島なのか<span class="sub">「飲食店出身」の中身</span></h2><p>経理を丸投げすると楽になることは、社長はもう知っています。「それなら石島さんに」となる理由はこちらです。</p></div>
+    <div class="q rv">店を回していた人の経理。<br>説明しなくても、仕組みから持ってきます。</div>
+    <div class="grid2">
+      <div class="card lift rv"><h3>根拠</h3><ul class="clean"><li><b>ラーメン店4店舗・年商1.6億円</b>をエリアマネージャーとして数字で回していました。理論原価と実原価のズレを現場で潰し、時間帯別の人時売上からシフトを組む側にいた人間です</li><li><b>7店舗から15店舗に増える間、本社の経理担当はゼロ人のまま</b>だった会社があります（現在も継続中）</li><li><b>FLは週1、月次の速報は10日</b>。1ヶ月前の数字では改善が1ヶ月遅れるので、確定を待たずにお返しします</li></ul></div>
+      <div class="card lift rv d1"><h3>普通の記帳代行と、何が違うか</h3><p class="note">届いた資料を処理するのではなく、届く資料そのものを変えます</p><ul class="clean"><li><b>現金を店に残さない運用</b>を先に作ります。夜間金庫で当日入金、小口はカードに置き換え</li><li><b>棚卸を習慣にします</b>。インフォマートかスプレッドシートに毎月入れてもらい、定着するまでリマインド</li><li>デリバリーの着金サイクル、店舗別の部門管理、インフォマートの操作は<b>最初から分かっているので、社長への聞き取りが発生しません</b></li><li>「他の会社さんではこうしていますよ」と、<b>飲食4社・15店舗の運用から提案</b>できます</li></ul></div>
+    </div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card rv"><h3>必ず一緒にお渡しするもの</h3><ul class="clean"><li><b>資金繰り表</b> ― 半年先の現預金がいくら残るか</li><li><b>現金残高のズレ</b> ― 店ごとの過不足を毎月</li><li><b>店舗別のFL</b> ― 本部費は按分せず、全店で賄う見せ方に</li></ul></div>
+      <div class="card rv d1"><h3>数字を見て、こちらから声をかけます</h3><p>「売上原価の金額が変ですよ。見たところ、棚卸の数字がずれています」と言えるのは、棚卸をやっていた側にいたからです。現場は「間違っていない」と言い、確認すると棚卸側が間違っていた、ということがよくあります。資金繰りで現金残が下がりそうなときも、先にご連絡します。</p></div>
     </div>
   </div>
 </section>
@@ -291,6 +314,22 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
       <div class="card sign-yes rv"><h3>💡 本気のサイン</h3><p class="note">この状態なら、ぜひ私に繋いでください</p><ul class="clean"><li><b>痛みを具体的に話し始める</b> ― 「担当が今月末で辞める」「試算表が遅れて銀行に出せない」など、期限や固有名詞が出てくる</li><li><b>「いくらで、どこまでやってくれるの？」</b>と価格や範囲を聞いてくる</li><li><b>社長本人</b>が「自分の時間を経営に使いたい」と言っている</li></ul></div>
       <div class="card sign-no rv d1"><h3>🙅‍♂️ まだ情報収集段階のサイン</h3><p class="note">無理に繋がなくて大丈夫です</p><ul class="clean"><li>「便利そうだね」「今度話聞かせて」で終わり、日程の話にならない</li><li>経理の話をしているのが社長ではなく、奥様やご担当者だけ</li></ul><p class="note" style="margin-top:10px">この場合は、そのまま置いておいてください。経理の人が辞めた瞬間に、また思い出していただければ十分です。</p></div>
     </div>
+    <div class="card rv" style="margin-top:16px"><h3>🗣 もう一歩、踏み込めるなら ― 会話のイメージ</h3><p class="note">顔見知りの社長と、店の話になったとき。聞くのは3つだけです。</p>
+      <ul class="rally">
+        <li class="me"><b>あなた</b><span>最近どう？ 店は</span></li>
+        <li><b>社長</b><span>忙しいよ。忙しいわりに金が残らないんだよな</span></li>
+        <li class="me"><b>あなた</b><span>先月の原価率、いくつだった？</span></li>
+        <li><b>社長</b><span>んー、35くらいじゃない？ 試算表まだ来てないから感覚だけど</span></li>
+        <li class="me"><b>あなた</b><span>棚卸って、毎月やってる？</span></li>
+        <li><b>社長</b><span>年末だけ。毎月は無理だよ、閉店後にそんな時間ない</span></li>
+        <li class="me"><b>あなた</b><span>じゃあその35、実際はもっと上かもよ。ラーメン屋で4店舗回してた人が飲食店の経理だけやってるんだけど、その人は棚卸のやり方から入って、原価率を週1で返してくれるんだよ</span></li>
+        <li><b>社長</b><span>週1？ それ経理代行の仕事なの？</span></li>
+        <li class="me"><b>あなた</b><span>本人が店を回してた側だから、そこまでやるんだよ。棚卸の数字がおかしいと向こうから電話が来るらしい。一回会ってみる？</span></li>
+        <li><b>社長</b><span>へえ……ちょっと会ってみたいな</span></li>
+      </ul>
+      <p class="note" style="margin-top:14px"><b>聞くのはこの3つです。</b>「先月の原価率、いくつだった？」「棚卸、毎月やってる？」「店に現金、置いてる？」 ― どれか一つで言葉に詰まれば、社長自身が穴に気づきます。「石島さんに会った方がいい」と言うのは、そのあとで十分です。</p>
+      <p class="note" style="margin-top:10px"><b>よくある返しと、切り返し</b><br>「経理は嫁がやってるから間に合ってる」→「奥さん、原価率まで出してくれてる？」<br>「1店舗だからそこまで要らない」→「2店舗目、考えたことある？ 数字を見れば、いけるかどうか分かるよ」<br>「税理士がいるから」→「先生はそのままでいい。先生の手前の、毎日の実務を引き受ける人だから」</p>
+    </div>
   </div>
 </section>
 
@@ -301,9 +340,8 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     <table class="goose rv">
       <tr><th>① 税理士<br>（記帳を手放したい先生）</th><td>記帳代行の受け皿を探している事務所。<b>先生が「記帳までは手が回らない」と言った瞬間が出番</b>です（記帳代行、経理代行）</td></tr>
       <tr><th>② 税理士<br>（AI・DXを進めたい先生）</th><td><b>40代〜50代の先生</b>で、<b>人は増やしたくないが業務効率は上げたい</b>、<b>DX・AI化を進めたいけれどご自身では手が回っていない</b>事務所です。<br>いま、マネーフォワードやfreeeとAIエージェントをつないで、記帳業務そのものを自動化するサービスを立ち上げています。先生の仕事を取りにいく話ではなく、<b>事務所の中の作業を一緒に減らす協業のご提案</b>です。<br><b>「協業できそうな会社がありますよ」と会わせていただくだけで大丈夫</b>です。その先のご提案は、私からさせていただきます。</td></tr>
-      <tr><th>③ BNIディレクター</th><td>チャプターを横断して、多くの経営者と会われている立場です。BNIの活動について話を伺いたいと思っています。こちらからもお繋ぎできる人脈があります。<b>1to1はいつでもお受けします。</b></td></tr>
-      <tr><th>④ 飲食店専門のデザイン・看板会社</th><td>店舗展開している会社と必ず接点があります</td></tr>
-      <tr><th>⑤ 食材卸</th><td>複数店舗の経営者と日常的に会っています</td></tr>
+      <tr><th>③ 飲食店専門のデザイン・看板会社</th><td>店舗展開している会社と必ず接点があります</td></tr>
+      <tr><th>④ 食材卸</th><td>複数店舗の経営者と日常的に会っています</td></tr>
     </table>
   </div>
 </section>
@@ -320,7 +358,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     </div>
     <div class="panel on" id="p-wife">
       <p class="target"><b>ターゲット</b>：経理を奥様に任せている飲食店のオーナー社長（1店舗から対象）</p>
-      <div class="talk"><span class="tag">Opening</span><br>「経理を奥様お一人に任せている状態って、その方が動けなくなったら店が止まってしまうんですよね。飲食店だけを見ている経理代行の方がいるんですが、興味はありますか？」</div>
+      <div class="talk"><span class="tag">Opening</span><br>「経理を奥様お一人に任せている状態って、その方が動けなくなったら店が止まってしまうんですよね。ラーメン店で4店舗を回していた人が飲食店の経理だけをやっているんですが、一度話を聞いてみませんか？」</div>
       <div class="msgbox"><button class="copy" data-copy="m-wife">📋 コピーする</button>
 <pre class="msg" id="m-wife">○○さん
 
@@ -331,22 +369,28 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 そこで、その負担を引き受けてくださる方をご紹介できればと思います。
 
 その方は石島さんとおっしゃって、経理歴10年、飲食店だけを専門に経理代行をされています。
-もともとラーメン店のエリアマネージャーをされていたので、現場の話が通じます。
+もともとラーメン店で4店舗をエリアマネージャーとして数字で見ていた方なので、
+飲食店の経理を、こちらが説明しなくても仕組みから整えてくださいます。
 
-数字の入力だけでなく、請求書の受け取りや発行、紙の書類をデータに置き換えるところまで
-手を動かしてくださるので、奥様の手元から作業そのものが減ります。
+店に現金を残さない運用や、毎月の棚卸の習慣づけから入ってくださるので、
+毎日の売上と仕入を送るだけで、原価率が週1回、資金繰り表が毎月、確定を待たずに届きます。
+7店舗から15店舗に増える間、本社の経理担当がゼロ人のままだった会社もあるそうです。
+
+請求書の受け取りや発行、紙の書類をデータに置き換えるところまで手を動かしてくださるので、
+奥様の手元から作業そのものが減ります。
 やり取りはオンラインで完結するので、全国どこでも対応されています。
 決算をお願いしている税理士の先生は、そのままで大丈夫だそうです。
 
 「奥さん、最近疲れてるな」
 「少し余裕を作ってあげたいな」
+「2店舗目、いけるかどうか数字で見てみたいな」
 
 そんなふうに思われることがありましたら、私にお声がけください。
 石島さんをご紹介させていただきます。</pre></div>
     </div>
     <div class="panel" id="p-staff">
       <p class="target"><b>ターゲット</b>：経理を担当者1名に任せている飲食店のオーナー社長（1店舗から対象）</p>
-      <div class="talk"><span class="tag">Opening</span><br>「経理を担当の方お一人に任せていると、その方が辞めた瞬間にお金の流れが分からなくなってしまうんですよね。飲食店専門の経理代行の方がいるんですが、興味はありますか？」</div>
+      <div class="talk"><span class="tag">Opening</span><br>「経理を担当の方お一人に任せていると、その方が辞めた瞬間にお金の流れが分からなくなってしまうんですよね。ラーメン店で4店舗を回していた人が飲食店の経理だけをやっているんですが、一度話を聞いてみませんか？」</div>
       <div class="msgbox"><button class="copy" data-copy="m-staff">📋 コピーする</button>
 <pre class="msg" id="m-staff">○○さん
 
@@ -357,18 +401,22 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 そこで、その部分を引き受けてくださる方をご紹介できればと思います。
 
 その方は石島さんとおっしゃって、経理歴10年、飲食店だけを専門に経理代行をされています。
-もともとラーメン店のエリアマネージャーをされていたので、現場の話が通じます。
+もともとラーメン店で4店舗をエリアマネージャーとして数字で見ていた方なので、
+飲食店の経理を、こちらが説明しなくても仕組みから整えてくださいます。
 
 経理のご担当者が突然辞めてしまった会社に助っ人で入るところから独立されたそうで、
 引き継ぎの資料が何もない状態からでも対応してくださいます。
+7店舗から15店舗に増える間、本社の経理担当がゼロ人のままだった会社もあるそうです。
 
-数字の入力だけでなく、請求書の受け取りや発行、紙の書類をデータに置き換えるところまで
-手を動かしてくださいます。
+店に現金を残さない運用や、毎月の棚卸の習慣づけから入ってくださるので、
+毎日の売上と仕入を送るだけで、原価率が週1回、資金繰り表が毎月、確定を待たずに届きます。
+請求書の受け取りや発行、紙の書類をデータに置き換えるところまで手を動かしてくださいます。
 やり取りはオンラインで完結するので、全国どこでも対応されています。
 決算をお願いしている税理士の先生は、そのままで大丈夫だそうです。
 
 「あの人にしか分からない仕事があるな」
 「そろそろ一人では厳しそうだな」
+「2店舗目、いけるかどうか数字で見てみたいな」
 
 そんなふうに感じられることがありましたら、私にお声がけください。
 石島さんをご紹介させていただきます。</pre></div>
@@ -548,7 +596,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
         <li><b>AI活用のゴール</b>は、<b>自分の経理代行部門をAIで置き換えて「無くす」</b>こと。スタッフには「AIを使う前の自分の仕事を全部AIに任せることができたら合格！」と言っています。1つの事業体をAIで置き換えられたら、それ自体が新しい商品になるからです</li></ul></div>
       <div class="gains-row"><div class="k">Accomplishments<small>実績</small></div><ul class="clean">
         <li>事業歴10年／顧客24社／社員3名・パート2名・外注3名の体制</li>
-        <li>飲食15店舗・スタッフ150名の会社 ― 経理が不在の状態から、<b>経理・総務・人事をまるごと</b>巻き取り。書類の開封からFAXの処理まで全て弊社で行っています</li>
+        <li>飲食15店舗・スタッフ150名の会社 ― 経理担当の退職をきっかけに、<b>経理・総務・人事をまるごと</b>巻き取り。<b>7店舗から15店舗に増える間、本社の経理担当はゼロ人のまま</b>。書類の開封からFAXの処理まで全て弊社で行っています</li>
         <li>ラーメンチェーン 直営20店舗・スタッフ200名＋FC国内外20店舗 ― 経理代行に加えて、<b>資金繰りと財務の相談</b>まで</li>
         <li>買取店とアパレル3店舗の経営で、自ら融資を引いて拡大した経験 ― 攻めと守りの両方を知っています</li></ul></div>
       <div class="gains-row"><div class="k">Interests<small>興味</small></div><ul class="clean">

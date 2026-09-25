@@ -208,6 +208,42 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
   table.prof th{width:32%}
   .q{font-size:20px}
 }
+/* accordion */
+details.acc>summary{list-style:none;cursor:pointer;display:block}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc>summary .sec-head{margin-bottom:0}
+details.acc[open]>summary .sec-head{margin-bottom:40px}
+.acc-tg{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:13.5px;font-weight:700;color:var(--blue);background:#fff;border:1.5px solid var(--blue);border-radius:999px;padding:8px 20px;transition:.2s}
+details.acc>summary:hover .acc-tg{background:var(--blue);color:#fff}
+.acc-tg::after{content:"＋";font-size:15px}
+details.acc[open]>summary .acc-tg::after{content:"－"}
+.acc-tg .c{display:none}
+details.acc[open]>summary .acc-tg .o{display:none}
+details.acc[open]>summary .acc-tg .c{display:inline}
+details.acc-card>summary{display:flex;align-items:center;justify-content:space-between;gap:12px}
+details.acc-card>summary h3{margin:0}
+details.acc-card>summary .acc-tg{margin-top:0;flex:0 0 auto}
+details.acc-card[open]>summary{margin-bottom:6px}
+/* referral how-to */
+.howto{background:var(--sky);border-radius:16px;padding:26px 28px;margin-bottom:26px}
+.howto h3{font-family:var(--serif);font-size:20px;margin-bottom:14px}
+.howto .steps{margin-top:0}
+.step strong{color:var(--navy)}
+.chooser{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 6px}
+.chooser button{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;font-family:var(--sans);font-size:14px;line-height:1.6;color:var(--ink);transition:.2s}
+.chooser button:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow)}
+.chooser button b{display:block;color:var(--navy);font-size:15px}
+.chooser button span{color:var(--muted);font-size:13px}
+.namefill{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#fff;border:1.5px dashed var(--blue);border-radius:12px;padding:14px 18px;margin:0 0 18px;font-size:14px}
+.namefill label{font-weight:700;color:var(--navy)}
+.namefill input{flex:1 1 180px;font-size:16px;font-family:var(--sans);padding:9px 12px;border:1px solid var(--line);border-radius:8px}
+.namefill .note{flex-basis:100%;margin:0}
+.phase{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--blue);border-radius:999px;padding:2px 12px;margin:0 0 8px}
+.phase.o{background:var(--orange)}
+.check{margin-top:18px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:10px;padding:16px 20px}
+.check h3{font-size:15px;margin-bottom:6px}
+.check ul{margin:0}
+@media (max-width:820px){.chooser{grid-template-columns:1fr}.howto{padding:20px 18px}}
 .rally{list-style:none;padding:0;margin:8px 0 0}
 .rally li{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px;line-height:1.7}
 .rally li:last-child{border-bottom:0}
@@ -295,26 +331,28 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 <!-- PHRASES -->
 <section id="phrases" class="tint">
   <div class="wrap">
-    <div class="sec-head rv"><p class="en">Listen For</p><h2><span class="ico">👂</span>聞き逃してはならないフレーズ</h2><p>このどれかが聞こえたら、私の出番です。</p></div>
+    <details class="acc"><summary><div class="sec-head rv"><p class="en">Listen For</p><h2><span class="ico">👂</span>聞き逃してはならないフレーズ</h2><p>このどれかが聞こえたら、私の出番です。</p><span class="acc-tg"><span class="o">ひらく</span><span class="c">とじる</span></span></div></summary>
     <div class="grid2">
       <div class="card lift rv"><h3>社長本人の口から出る言葉</h3><ul class="clean quote"><li>「奥さんが経理をやっている」</li><li>「経理の人が辞めてしまって」</li><li>「経理はパートさん一人に任せてる」</li><li>「店舗を増やしたいけど、事務が回らない」</li><li>「試算表が3ヶ月遅れている」</li></ul></div>
       <div class="card lift rv d1"><h3>社長がふと漏らす、その手前の言葉</h3><ul class="clean quote"><li>「奥さんに余裕を作ってあげたいな」</li><li>「あの人にしか分からない仕事があるな」</li><li>「もう1店舗出したい」</li></ul></div>
       <div class="card lift rv d2"><h3>見ていて気づくこと</h3><ul class="clean"><li>社長が領収書を袋で持ってくる</li><li>社長が現場に入りっぱなしで、経営を考える時間がない</li><li>請求書をいまだに手で作っている</li></ul></div>
       <div class="card lift rv d3"><h3>税理士の先生から</h3><p class="note">記帳を手放したい先生</p><ul class="clean quote"><li>「記帳までは手が回らない」</li><li>「キャパオーバーで受けられない」</li></ul><p class="note" style="margin-top:10px">効率を上げたい先生（協業のご相談）</p><ul class="clean quote"><li>「人を増やさずに件数を増やしたい」</li><li>「AIを使いたいが、何から手をつければいいか」</li><li>「入力作業に人を取られている」</li></ul></div>
     </div>
+    </details>
   </div>
 </section>
 
 <!-- SERIOUS -->
 <section id="serious">
   <div class="wrap">
-    <div class="sec-head rv"><p class="en">How To Tell</p><h2><span class="ico">🔍</span>本気かどうかの見分け方</h2><p>「聞き逃してはならないフレーズ」が出たら、一歩だけ踏み込んでみてください。</p></div>
+    <details class="acc"><summary><div class="sec-head rv"><p class="en">How To Tell</p><h2><span class="ico">🔍</span>本気かどうかの見分け方</h2><p>「聞き逃してはならないフレーズ」が出たら、一歩だけ踏み込んでみてください。</p><span class="acc-tg"><span class="o">ひらく</span><span class="c">とじる</span></span></div></summary>
     <div class="q rv">「それ、いま一番困っているのは何ですか？」</div>
     <div class="grid2">
       <div class="card sign-yes rv"><h3>💡 本気のサイン</h3><p class="note">この状態なら、ぜひ私に繋いでください</p><ul class="clean"><li><b>痛みを具体的に話し始める</b> ― 「担当が今月末で辞める」「試算表が遅れて銀行に出せない」など、期限や固有名詞が出てくる</li><li><b>「いくらで、どこまでやってくれるの？」</b>と価格や範囲を聞いてくる</li><li><b>社長本人</b>が「自分の時間を経営に使いたい」と言っている</li></ul></div>
       <div class="card sign-no rv d1"><h3>🙅‍♂️ まだ情報収集段階のサイン</h3><p class="note">無理に繋がなくて大丈夫です</p><ul class="clean"><li>「便利そうだね」「今度話聞かせて」で終わり、日程の話にならない</li><li>経理の話をしているのが社長ではなく、奥様やご担当者だけ</li></ul><p class="note" style="margin-top:10px">この場合は、そのまま置いておいてください。経理の人が辞めた瞬間に、また思い出していただければ十分です。</p></div>
     </div>
-    <div class="card rv" style="margin-top:16px"><h3>🗣 もう一歩、踏み込めるなら ― 会話のイメージ</h3><p class="note">顔見知りの社長と、店の話になったとき。聞くのは3つだけです。</p>
+    </details>
+    <details class="acc acc-card card rv" style="margin-top:16px"><summary><h3>🗣 もう一歩、踏み込めるなら ― 会話のイメージ</h3><span class="acc-tg"><span class="o">ひらく</span><span class="c">とじる</span></span></summary><p class="note">顔見知りの社長と、店の話になったとき。聞くのは3つだけです。</p>
       <ul class="rally">
         <li class="me"><b>あなた</b><span>最近どう？ 店は</span></li>
         <li><b>社長</b><span>忙しいよ。忙しいわりに金が残らないんだよな</span></li>
@@ -329,7 +367,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
       </ul>
       <p class="note" style="margin-top:14px"><b>聞くのはこの3つです。</b>「先月の原価率、いくつだった？」「棚卸、毎月やってる？」「店に現金、置いてる？」 ― どれか一つで言葉に詰まれば、社長自身が穴に気づきます。「石島さんに会った方がいい」と言うのは、そのあとで十分です。</p>
       <p class="note" style="margin-top:10px"><b>よくある返しと、切り返し</b><br>「経理は嫁がやってるから間に合ってる」→「奥さん、原価率まで出してくれてる？」<br>「1店舗だからそこまで要らない」→「2店舗目、考えたことある？ 数字を見れば、いけるかどうか分かるよ」<br>「税理士がいるから」→「先生はそのままでいい。先生の手前の、毎日の実務を引き受ける人だから」</p>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -349,8 +387,32 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 <!-- REFERRAL COPY -->
 <section id="referral">
   <div class="narrow">
-    <div class="sec-head rv"><p class="en">Copy &amp; Send</p><h2><span class="ico">📋</span>お繋ぎ文<span class="sub">そのまま送れます</span></h2><p>お心当たりの方が浮かんだら、下の文面を<b>コピーしてそのままお送りください</b>。○○さんの部分だけ、お名前に変えていただければ大丈夫です。</p></div>
-    <div class="tabs rv">
+    <div class="sec-head rv"><p class="en">Copy &amp; Send</p><h2><span class="ico">📋</span>お繋ぎ文<span class="sub">そのまま送れます</span></h2><p>お心当たりの方が浮かんだら、ここから<b>口頭のひと言</b>と<b>送る文面</b>の両方が手に入ります。</p></div>
+
+    <div class="howto rv">
+      <h3>使い方</h3>
+      <div class="steps">
+        <div class="step"><b>1</b>「聞き逃してはならないフレーズ」が聞こえたら、下のボタンで<strong>相手に合う文面</strong>を選びます</div>
+        <div class="step"><b>2</b>まずは<strong>口頭のひと言</strong>を話してみてください。反応を見るだけで大丈夫です</div>
+        <div class="step"><b>3</b>「聞いてみたい」となったら、<strong>お名前を入れてコピー</strong>し、LINEやメッセンジャーでそのまま送ってください</div>
+        <div class="step"><b>4</b>送ったら<strong>石島にひと声</strong>ください。私からご連絡してお話を伺います。合わなければ、その場ではっきりお伝えします</div>
+      </div>
+      <p style="margin:22px 0 0"><b>どの方に送りますか？</b> 押すと、その文面が開きます。</p>
+      <div class="chooser">
+        <button data-go="wife"><b>🍜 奥様が経理をしている社長</b><span>「嫁がやってるから」と聞いたとき</span></button>
+        <button data-go="staff"><b>🍜 担当者1名に任せている社長</b><span>「経理の人が辞めて」「あの人しか分からない」と聞いたとき</span></button>
+        <button data-go="tax"><b>🧮 記帳を手放したい税理士の先生</b><span>「記帳までは手が回らない」「キャパオーバー」と聞いたとき</span></button>
+        <button data-go="taxai"><b>🤖 AI・DXを進めたい税理士の先生</b><span>「人を増やさずに件数を」「AIを使いたい」と聞いたとき</span></button>
+      </div>
+    </div>
+
+    <div class="namefill rv">
+      <label for="nm">送る相手のお名前</label>
+      <input id="nm" type="text" placeholder="例：山田" autocomplete="off">
+      <p class="note">入れると、全ての文面の「○○」がそのお名前に変わります。「さん」「先生」は文面に入っているので、苗字だけで大丈夫です。</p>
+    </div>
+
+    <div class="tabs">
       <button class="tab on" data-t="wife">奥様が経理をしている社長へ</button>
       <button class="tab" data-t="staff">担当者1名に任せている社長へ</button>
       <button class="tab" data-t="tax">税理士の先生へ｜記帳を手放したい</button>
@@ -358,7 +420,8 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     </div>
     <div class="panel on" id="p-wife">
       <p class="target"><b>ターゲット</b>：経理を奥様に任せている飲食店のオーナー社長（1店舗から対象）</p>
-      <div class="talk"><span class="tag">Opening</span><br>「経理を奥様お一人に任せている状態って、その方が動けなくなったら店が止まってしまうんですよね。ラーメン店で4店舗を回していた人が飲食店の経理だけをやっているんですが、一度話を聞いてみませんか？」</div>
+      <div class="talk"><span class="phase">① まず口頭で、ひと言</span><br>「経理を奥様お一人に任せている状態って、その方が動けなくなったら店が止まってしまうんですよね。ラーメン店で4店舗を回していた人が飲食店の経理だけをやっているんですが、一度話を聞いてみませんか？」</div>
+      <span class="phase o">② 反応があったら、この文面を送る</span>
       <div class="msgbox"><button class="copy" data-copy="m-wife">📋 コピーする</button>
 <pre class="msg" id="m-wife">○○さん
 
@@ -390,7 +453,8 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     </div>
     <div class="panel" id="p-staff">
       <p class="target"><b>ターゲット</b>：経理を担当者1名に任せている飲食店のオーナー社長（1店舗から対象）</p>
-      <div class="talk"><span class="tag">Opening</span><br>「経理を担当の方お一人に任せていると、その方が辞めた瞬間にお金の流れが分からなくなってしまうんですよね。ラーメン店で4店舗を回していた人が飲食店の経理だけをやっているんですが、一度話を聞いてみませんか？」</div>
+      <div class="talk"><span class="phase">① まず口頭で、ひと言</span><br>「経理を担当の方お一人に任せていると、その方が辞めた瞬間にお金の流れが分からなくなってしまうんですよね。ラーメン店で4店舗を回していた人が飲食店の経理だけをやっているんですが、一度話を聞いてみませんか？」</div>
+      <span class="phase o">② 反応があったら、この文面を送る</span>
       <div class="msgbox"><button class="copy" data-copy="m-staff">📋 コピーする</button>
 <pre class="msg" id="m-staff">○○さん
 
@@ -423,7 +487,8 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     </div>
     <div class="panel" id="p-tax">
       <p class="target"><b>ターゲット</b>：記帳代行を手放したい、またはキャパオーバーの税理士の先生（＝<b>案件を渡していただく</b>お繋ぎ）</p>
-      <div class="talk"><span class="tag">Opening</span><br>「記帳代行を手放したいけど、任せられる先がないという先生は多いんですよね。飲食店専門で受け皿になれる方がいるんですが、興味はありますか？」</div>
+      <div class="talk"><span class="phase">① まず口頭で、ひと言</span><br>「記帳代行を手放したいけど、任せられる先がないという先生は多いんですよね。飲食店専門で受け皿になれる方がいるんですが、興味はありますか？」</div>
+      <span class="phase o">② 反応があったら、この文面を送る</span>
       <div class="msgbox"><button class="copy" data-copy="m-tax">📋 コピーする</button>
 <pre class="msg" id="m-tax">○○先生
 
@@ -443,7 +508,8 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     </div>
     <div class="panel" id="p-taxai">
       <p class="target"><b>ターゲット</b>：40代〜50代の税理士事務所の先生。人は増やしたくないが業務効率を上げたい／DX・AI化を進めたいが自分では進められていない（＝<b>会わせていただくだけ</b>のお繋ぎ。提案は石島がします）</p>
-      <div class="talk"><span class="tag">Opening</span><br>「人を増やさずに件数を増やしたい、という先生は多いんですよね。マネーフォワードやfreeeとAIをつないで、記帳の作業そのものを自動化している会社があるんですが、一度話を聞いてみませんか？」</div>
+      <div class="talk"><span class="phase">① まず口頭で、ひと言</span><br>「人を増やさずに件数を増やしたい、という先生は多いんですよね。マネーフォワードやfreeeとAIをつないで、記帳の作業そのものを自動化している会社があるんですが、一度話を聞いてみませんか？」</div>
+      <span class="phase o">② 反応があったら、この文面を送る</span>
       <div class="msgbox"><button class="copy" data-copy="m-taxai">📋 コピーする</button>
 <pre class="msg" id="m-taxai">○○先生
 
@@ -469,18 +535,21 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
 そんなふうに思われることがありましたら、私にお声がけください。
 石島さんをおつなぎします。まずは情報交換から、とのことです。</pre></div>
     </div>
-    <div class="steps">
-      <div class="step rv"><b>1</b>「聞き逃してはならないフレーズ」が聞こえる</div>
-      <div class="step rv d1"><b>2</b>「いま一番困っているのは？」と一歩踏み込む</div>
-      <div class="step rv d2"><b>3</b>お繋ぎ文を送る、または石島にひと声かける</div>
-      <div class="step rv d3"><b>4</b>石島からご連絡し、まずお話を伺います。合わなければ、その場ではっきりお伝えします</div>
+    <div class="check rv">
+      <h3>✅ 送る前に、ここだけ確認してください</h3>
+      <ul class="clean">
+        <li>飲食店の場合、送る相手は<b>社長ご本人</b>ですか？ 奥様やご担当者だけの場合は、社長に会わせてもらうまでが1セットです</li>
+        <li>相手が<b>困りごとを口にした</b>あとですか？ 「興味がありそう」の段階なら、まだ置いておいて大丈夫です</li>
+        <li>文面は<b>ご自分の言葉に直して</b>いただいて構いません。一文足すだけでも、ぐっと届きやすくなります</li>
+        <li>迷ったら、送る前に<b>石島にひと声</b>ください。そのほうがお互いの時間が守れます</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- VOICES -->
 <section id="voices" class="tint">
-  <div class="sec-head rv" style="padding:0 24px"><p class="en">Voices</p><h2>お客様の声</h2><p>合同会社LMJの公式サイトに掲載しているお客様の声から。</p></div>
+  <details class="acc" id="voices-acc"><summary><div class="sec-head rv" style="padding:0 24px"><p class="en">Voices</p><h2>お客様の声</h2><p>合同会社LMJの公式サイトに掲載しているお客様の声から。</p><span class="acc-tg"><span class="o">ひらく</span><span class="c">とじる</span></span></div></summary>
   <div class="marquee">
     <div class="track" id="track">
       <div class="voice"><div class="who">エステサロン経営者様</div>今まで妻が経理を担当していましたが、アウトソーシングしたことで時間に余裕ができ、家族で出かける機会が増えました。本業の売上も伸びたし、夫婦仲もさらに良くなって、本当に言うことなしです。</div>
@@ -499,6 +568,7 @@ footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--muted);back
     </div>
     <p class="note rv" style="text-align:center;margin-top:12px">導入企業様（公式サイト掲載分）。提携税理士：井上 恵 先生</p>
   </div>
+  </details>
 </section>
 
 <!-- NOT / GIVE -->
@@ -650,6 +720,19 @@ document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click'
 document.querySelectorAll('.sheet-tabs button').forEach(function(t){t.addEventListener('click',function(){
   document.querySelectorAll('.sheet-tabs button').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.sheet').forEach(function(x){x.classList.remove('on')});
   t.classList.add('on');var s=document.getElementById(t.dataset.s);s.classList.add('on','in')})});
+// chooser
+function openTab(k){document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x.dataset.t===k)});
+  document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('on',x.id==='p-'+k)});
+  document.getElementById('p-'+k).scrollIntoView({behavior:'smooth',block:'start'})}
+document.querySelectorAll('.chooser button').forEach(function(b){b.addEventListener('click',function(){openTab(b.dataset.go)})});
+// name fill
+var msgs=document.querySelectorAll('pre.msg');msgs.forEach(function(m){m.dataset.tpl=m.textContent});
+document.getElementById('nm').addEventListener('input',function(e){var v=e.target.value.trim();
+  msgs.forEach(function(m){m.textContent=v?m.dataset.tpl.split('○○').join(v):m.dataset.tpl})});
+// open accordion when navigated by anchor
+function openFor(h){if(!h)return;var el=document.querySelector(h);if(!el)return;var d=el.matches('details')?el:el.querySelector('details.acc');if(d)d.open=true}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){openFor(a.getAttribute('href'))})});
+openFor(location.hash);
 // copy
 function showToast(){var el=document.getElementById('toast');el.classList.add('show');setTimeout(function(){el.classList.remove('show')},2200)}
 function fallback(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(ta)}

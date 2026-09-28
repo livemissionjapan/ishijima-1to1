@@ -149,6 +149,17 @@ pre.msg{margin:0;padding:24px 26px 26px;white-space:pre-wrap;font-family:var(--s
 .voice .who::before{content:"“";font-family:var(--disp);font-size:26px;line-height:0;color:var(--orange)}
 .logos{display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;margin-top:22px}
 .logos span{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 12px}
+/* voices */
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-size:14.5px;line-height:1.8}
+.vcard .who{font-weight:700;color:var(--navy);font-size:15px;margin:0 0 12px;display:flex;align-items:center;gap:8px;line-height:1.5}
+.vcard .vi{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--sky);display:grid;place-items:center;font-size:17px}
+.vcard dl{margin:0}
+.vcard dt{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 10px;margin:0 0 4px}
+.vcard dt.pain{background:#fdecea;color:var(--red)}
+.vcard dt.fix{background:var(--green-bg);color:var(--green);margin-top:10px}
+.vcard dd{margin:0}
+@media (max-width:820px){.vgrid{grid-template-columns:1fr}}
 /* story */
 .story .narrow p{font-size:17px}
 .pull{font-family:var(--serif);font-size:26px;color:var(--navy);border-left:4px solid var(--orange);padding:8px 0 8px 22px;margin:28px 0;line-height:1.6}
@@ -549,17 +560,18 @@ details.acc-card[open]>summary{margin-bottom:6px}
 
 <!-- VOICES -->
 <section id="voices" class="tint">
-  <details class="acc" id="voices-acc"><summary><div class="sec-head rv" style="padding:0 24px"><p class="en">Voices</p><h2>お客様の声</h2><p>合同会社LMJの公式サイトに掲載しているお客様の声から。</p><span class="acc-tg"><span class="o">ひらく</span><span class="c">とじる</span></span></div></summary>
-  <div class="marquee">
-    <div class="track" id="track">
-      <div class="voice"><div class="who">エステサロン経営者様</div>今まで妻が経理を担当していましたが、アウトソーシングしたことで時間に余裕ができ、家族で出かける機会が増えました。本業の売上も伸びたし、夫婦仲もさらに良くなって、本当に言うことなしです。</div>
-      <div class="voice"><div class="who">年商5億円規模：飲食店経営者様</div>経理だけじゃなく、バックオフィス業務をすべて外注しています。社内での教育がいらないし、離職の心配もしなくていいので、本当に助かっています。LMJさんがいなかったら、今のうちの会社は成り立っていません。</div>
-      <div class="voice"><div class="who">16店舗を展開：飲食店経営者様</div>社内に経理をサポートしてくれるスタッフはいるんですが、経験が浅いので、LMJさんに頼って、スタッフの教育もサポートしてもらっています。細かいところまで手が届く対応で、本当に助かっています。</div>
-      <div class="voice"><div class="who">有限会社コン・コース 代表取締役 大関虎之介様</div>単なる記帳代行ではなく、経営者の視点に立った「攻めの財務支援」をしてくれます。圧倒的なスピードで財務状況が可視化され、不要なコストが削減されました。自社で経理担当者を採用・教育するコストとリスクを考えれば、絶対に必要不可欠だと感じています。</div>
-      <div class="voice"><div class="who">リセール事業経営者様</div>税理士さんにすべて丸投げするとコストが高かったんですが、記帳代行だけお願いすることで、月間のコストを1万5,000円削減できました。</div>
-      <div class="voice"><div class="who">オンラインサロン運営者様</div>経理のアウトソーシングによって、ストレスが激減して、新規事業を3つ立ち上げることができました。会社の規模も1年で2億円を超えるまでになり、もう今ではLMJさんなしに事業拡大は考えられません。</div>
-      <div class="voice"><div class="who">買取店経営者様</div>経理業務だけでなく、お客様を管理するためのシート作りや管理ルールについても相談させていただきました。経理以外でも経営拡大のためにたくさん相談しています。</div>
-      <div class="voice"><div class="who">フリーカメラマン様</div>管理や書類整理が本当に苦手なんです。書類の送付日とか、まだですかって声をかけてもらえるのが本当にありがたいです。経営が苦しいときに、親身になって相談に乗ってくれたことは、今でも忘れられません。</div>
+  <details class="acc" id="voices-acc"><summary><div class="sec-head rv" style="padding:0 24px"><p class="en">Voices</p><h2>お客様の声</h2><p>どんな方の、どんな困りごとが、どう解決したのか。合同会社LMJの公式サイトに掲載しているお客様の声から整理しました。</p><span class="acc-tg"><span class="o">ひらく</span><span class="c">とじる</span></span></div></summary>
+  <div class="wrap">
+    <div class="vgrid">
+      <div class="vcard"><p class="who"><span class="vi">🍜</span>年商5億円規模の飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>バックオフィスの人を採用しても、教育に手間がかかり、辞められる心配がいつもあった</dd><dt class="fix">どう解決したか</dt><dd>経理だけでなくバックオフィス業務をまるごとLMJへ。教育も離職の心配もいらなくなり「LMJさんがいなかったら、今のうちの会社は成り立っていません」とのお声をいただいています</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">🍜</span>16店舗を展開する飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>社内に経理スタッフはいるが、まだ経験が浅い</dd><dt class="fix">どう解決したか</dt><dd>経理のサポートと一緒に、スタッフさんの教育もLMJが担当。細かいところまで手が届く対応で、社内の経理が回るようになりました</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">💆</span>エステサロンの社長</p><dl><dt class="pain">困りごと</dt><dd>奥様が経理を担当していて、夫婦ともに時間の余裕がなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに切り出しました。時間に余裕ができて家族で出かける機会が増え、本業の売上も伸びました</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">🏢</span>有限会社コン・コース 代表取締役 大関虎之介様</p><dl><dt class="pain">困りごと</dt><dd>経理担当を自社で採用・教育するには、コストもリスクも大きい</dd><dt class="fix">どう解決したか</dt><dd>財務の状況をスピードを上げて見える化し、不要なコストを削減。その数字を現場に共有したことで、従業員が自分で考えて動く組織に育っています</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">♻️</span>リセール事業の社長</p><dl><dt class="pain">困りごと</dt><dd>税理士さんに全部を丸投げしていて、毎月のコストが高かった</dd><dt class="fix">どう解決したか</dt><dd>記帳代行だけをLMJに移しました。税理士さんはそのままで、月1万5,000円のコスト削減</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">💻</span>オンラインサロンの運営者</p><dl><dt class="pain">困りごと</dt><dd>経理まわりのストレスで、新しいことに手が回らなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに任せてストレスが激減。新規事業を3つ立ち上げ、1年で会社の規模が2億円を超えました</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">🎨</span>グラフィックデザイナー</p><dl><dt class="pain">困りごと</dt><dd>請求書の作成と送付、入金の確認が苦手で、制作に集中できない時があった</dd><dt class="fix">どう解決したか</dt><dd>その業務をLMJが引き受け、煩わしい作業から解放されて、好きな制作に集中できるようになりました</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">📷</span>フリーカメラマン</p><dl><dt class="pain">困りごと</dt><dd>管理や書類整理がどうしても苦手</dd><dt class="fix">どう解決したか</dt><dd>書類の送付日が近づくと、LMJから「まだですか」と声をかけています。経営が苦しい時期には、資金面の相談にも乗りました</dd></dl></div>
+      <div class="vcard"><p class="who"><span class="vi">🏪</span>買取店の社長</p><dl><dt class="pain">困りごと</dt><dd>お客様の管理方法が決まっておらず、経営を広げる土台がなかった</dd><dt class="fix">どう解決したか</dt><dd>顧客管理のシートとルールをLMJが一緒に作り、分析ツールの紹介や作成までお手伝い。経理以外でも経営拡大の相談をいただいています</dd></dl></div>
     </div>
   </div>
   <div class="wrap">
@@ -712,7 +724,6 @@ var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isInt
   function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1400,1);var ease=1-Math.pow(1-p,3);el.textContent=Math.round(n*ease);if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)})},{threshold:.5});
 document.querySelectorAll('.cnt').forEach(function(el){cio.observe(el)});
 // marquee duplicate
-var tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
 // tabs
 document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
   document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('on')});

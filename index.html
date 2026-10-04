@@ -164,6 +164,8 @@ ul.clean li::before{content:'';position:absolute;left:0;top:.95em;width:5px;heig
 #referral .narrow{max-width:1000px}
 #referral .sec-head{margin-bottom:30px}
 .video{margin:0 0 34px}
+.video video.howto{display:block;width:100%;aspect-ratio:16/9;background:#14274a;border-radius:10px;box-shadow:0 14px 40px rgba(20,39,74,.16)}
+.video-cap{margin:10px 0 0;font-size:12px;color:var(--muted,#667085)}
 .video-ph{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:16px;border-block:1px solid var(--line);padding:20px 0}
 .video-ph .play{display:grid;place-items:center;color:var(--blue);font-size:15px;border:1px solid var(--line);height:38px}
 .video-ph b{font-size:13px;font-weight:500}
@@ -601,7 +603,8 @@ footer{padding-inline:22px;font-size:11px}
 
     <div class="video rv">
       <!-- 使い方の動画：YouTube等の埋め込みURLが決まったら、この div の中身を <iframe> に差し替える -->
-      <div class="video-ph"><span class="play" aria-hidden="true"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M2 2L12 8L2 14Z" stroke="currentColor" stroke-width="1.2"/></svg></span><b>お繋ぎ文の使い方（動画）</b><span class="note">準備中です</span></div>
+      <video class="howto" controls playsinline preload="metadata" poster="video/otsunagi_howto_poster.jpg"><source src="video/otsunagi_howto.mp4" type="video/mp4"></video>
+      <p class="video-cap">お繋ぎ文の使い方（46秒）　音声はAIで生成しています</p>
     </div>
 
     <div class="namefill rv">

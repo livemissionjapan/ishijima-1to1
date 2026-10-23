@@ -630,6 +630,63 @@ footer{font-size:14px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 @media print{.top,.side,.copy,.toast{display:none}.js .rv{opacity:1;transform:none}section{padding:30px 0}.panel{display:block;margin-block:30px}.flow{overflow:visible}.flow-track{width:auto;display:block}.flow .card,.flow .vcard{width:auto;margin:0 0 20px!important;break-inside:avoid}.flow [aria-hidden=true]{display:none}.hero .up{animation:none}}
 .tab.tab-wide{grid-column:1/-1}
+details.past-acc>summary{list-style:none;cursor:pointer;display:flex;justify-content:center;margin:0 0 4px}
+details.past-acc>summary::-webkit-details-marker{display:none}
+details.past-acc>summary span{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--blue,#1f5aa6);border:2px solid currentColor;border-radius:999px;padding:12px 26px;background:#fff}
+details.past-acc>summary span::after{content:"＋";font-size:20px;line-height:1}
+details.past-acc[open]>summary span::after{content:"－"}
+details.past-acc[open]>summary{margin-bottom:26px}
+/* Small illustrations for voices and sheet headings. */
+#voices .voice-icon{width:64px;height:64px;object-fit:contain;margin:0 0 16px;pointer-events:none}
+#s-prof>h3:first-child,#s-gains>h3:first-child{position:relative}
+.sheet-heading-icon{position:absolute;right:0;top:50%;transform:translateY(-50%);width:64px;height:64px;object-fit:contain;pointer-events:none}
+.book-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:10px 18px;border-radius:8px;background:var(--blue,#1f5aa6);color:#fff!important;font-weight:800;text-decoration:none}
+.book-link:hover{filter:brightness(1.1)}
+
+/* Fifth edition: GAINS reading rhythm and the making-of entrance. */
+.making-banner{background:var(--sky);border-bottom:2px solid #c3d9e8}
+.making-banner .wrap{display:flex;align-items:center;justify-content:center;gap:28px;padding-block:14px}
+.making-banner p{margin:0;color:var(--navy);font-size:17px;font-weight:800;line-height:1.8}
+.making-banner p::before{content:'';display:inline-block;width:7px;height:18px;margin-right:12px;background:var(--gold);border-radius:3px;vertical-align:-2px}
+.making-banner a{display:inline-flex;align-items:center;justify-content:center;gap:18px;flex-shrink:0;min-height:46px;padding:9px 20px;border-radius:7px;background:var(--blue);color:#fff;font-size:15px;font-weight:800;line-height:1.7;text-decoration:none}
+.making-banner a::after{content:'';width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg)}
+.making-banner a:hover{background:var(--navy)}
+#s-gains>h3:first-child{padding-right:80px;margin-bottom:28px}
+#s-gains table.gains{border:0;border-collapse:separate;border-spacing:0 18px;margin-top:-18px}
+#s-gains .gains-row th,#s-gains .gains-row td{border:2px solid #c3d6e4;padding:28px;vertical-align:top}
+#s-gains .gains-row th{width:27%;background:#e0edf7;border-right:0;border-left:5px solid var(--blue);border-radius:10px 0 0 10px}
+#s-gains .gains-row td{background:#fff;border-left:0;border-radius:0 10px 10px 0;line-height:2.05}
+#s-gains .gains-label{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+#s-gains .gains-icon{width:80px;height:80px;object-fit:contain;flex-shrink:0}
+#s-gains .gains-row .k{display:flex;flex-direction:column;font-size:16px;font-weight:800;line-height:1.6;color:var(--blue);overflow-wrap:normal}
+#s-gains .gains-row .k small{order:-1;display:block;margin:0 0 5px;font-family:var(--sans);font-size:23px;font-weight:800;line-height:1.6;color:var(--navy)}
+#s-gains .gains-row .clean li{margin:0;padding-left:22px;font-size:var(--body);line-height:2.05}
+#s-gains .gains-row .clean li+li{margin-top:18px;padding-top:18px;border-top:1px solid #dae5ec}
+#s-gains .gains-row .clean li::before{top:1em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+#s-gains .gains-row .clean li+li::before{top:calc(1em + 18px)}
+#s-gains .gains-row p{font-size:var(--body);line-height:2.05}
+@media(max-width:980px) and (min-width:761px){
+#s-gains .gains-row th,#s-gains .gains-row td{padding:24px}
+#s-gains .gains-row th{width:30%}
+#s-gains .gains-row .k small{font-size:21px}
+}
+@media(max-width:760px){
+.making-banner .wrap{flex-direction:column;align-items:stretch;gap:11px;padding-block:16px}
+.making-banner p{font-size:16px;line-height:1.8}
+.making-banner p::before{display:none}
+.making-banner a{align-self:flex-start;min-height:44px;padding:9px 17px;font-size:14px}
+#s-gains table.gains{border-spacing:0;margin-top:0}
+#s-gains .gains-row{margin-bottom:22px;border:2px solid #c3d6e4;border-radius:10px;overflow:hidden}
+#s-gains .gains-row th,#s-gains .gains-row td{width:100%;border:0;border-radius:0;padding:22px 20px}
+#s-gains .gains-row th{padding:18px 20px;border-left:5px solid var(--blue);border-bottom:1px solid #c3d6e4}
+#s-gains .gains-label{flex-direction:row;align-items:center;gap:16px}
+#s-gains .gains-icon{width:64px;height:64px}
+#s-gains .gains-row .k{font-size:14px;min-width:0}
+#s-gains .gains-row .k small{font-size:21px;margin-bottom:3px}
+#s-gains .gains-row .clean li{padding-left:19px}
+#s-gains .book-link{display:flex;justify-content:space-between;padding:12px;font-size:15px;line-height:1.8}
+}
+@media print{.making-banner{display:none}#s-gains .gains-row{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -643,9 +700,16 @@ footer{font-size:14px}
   </div>
 </header>
 
+<aside class="making-banner">
+  <div class="wrap">
+    <p>このページ、実はAIで全部つくれるんです</p>
+    <a href="howto.html">作り方を見る</a>
+  </div>
+</aside>
+
+
 <div class="side">
   <a class="o" href="#referral">お繋ぎ文をコピー</a>
-  <a href="#contact">1to1のご相談</a>
 </div>
 
 <div class="hero">
@@ -670,7 +734,7 @@ footer{font-size:14px}
 <div class="stats">
   <div class="wrap">
     <div class="stat rv"><b><span class="cnt" data-n="10">0</span><small>年</small></b><span class="lbl">経理代行歴<br>2016年開業</span></div>
-    <div class="stat rv d1"><b><span class="cnt" data-n="24">0</span><small>社</small></b><span class="lbl">顧問先<br>社員3名・パート2名・外注3名</span></div>
+    <div class="stat rv d1"><b><span class="cnt" data-n="24">0</span><small>社</small></b><span class="lbl">顧問先<br>社員3名・パート2名・外注2名</span></div>
     <div class="stat rv d2"><b>7<small>→</small>15<small>店舗</small></b><span class="lbl">店が倍に増える間<br>本社の経理担当はゼロ人のまま</span></div>
     <div class="stat rv d3"><b><span class="cnt" data-n="200">0</span><small>名</small></b><span class="lbl">ラーメンチェーン直営20店舗＋FC20<br>経理代行＋資金繰り・財務</span></div>
   </div>
@@ -701,9 +765,9 @@ footer{font-size:14px}
   <div class="wrap">
     <div class="sec-head rv"><p class="en">How</p><h2>大切にしている<wbr><span class="nowrap">3つのやり方</span></h2><p>「安心」を渡すために、この3つを毎回守っています。</p></div>
     <div class="grid3">
-      <div class="card how rv"><span class="how-n">1<img class="how-icon" src="img/icons/restaurant.png" width="384" height="384" loading="lazy" alt=""></span><h3>店の目線で、数字を見る</h3><ul class="clean"><li><b>ラーメン店4店舗・年商1.6億円</b>をエリアマネージャーとして数字で回していました</li><li>理論原価と実原価のズレを現場で潰し、人時売上からシフトを組む側にいた人間です</li><li>デリバリーの着金、店舗別の部門管理、インフォマートは<b>最初から分かっているので、社長への聞き取りが発生しません</b></li></ul></div>
-      <div class="card how rv d1"><span class="how-n">2<img class="how-icon" src="img/icons/accounting-ai.png" width="384" height="384" loading="lazy" alt=""></span><h3>届く資料そのものを変える</h3><ul class="clean"><li><b>現金を店に残さない運用</b>を先に作ります。夜間金庫で当日入金、小口はカードに</li><li><b>棚卸を習慣にします</b>。毎月入れてもらい、定着するまでリマインド</li><li>「他の会社さんではこうしていますよ」と、<b>飲食4社・15店舗の運用から提案</b>します</li></ul></div>
-      <div class="card how rv d2"><span class="how-n">3<img class="how-icon" src="img/icons/message.png" width="384" height="384" loading="lazy" alt=""></span><h3>確定を待たずに、先に声をかける</h3><ul class="clean"><li><b>FLは週1、月次の速報は10日</b>でお返しします</li><li>「棚卸の数字がずれていますよ」と、こちらから電話します</li><li>資金繰りで現金残が下がりそうなときも、<b>先にご連絡</b>します</li></ul></div>
+      <div class="card how rv"><span class="how-n">1<img class="how-icon" src="img/icons/how-store-numbers.png" width="384" height="384" loading="lazy" alt="店とグラフ、電卓"></span><h3>店の目線で、数字を見る</h3><ul class="clean"><li><b>ラーメン店4店舗・年商1.6億円</b>をエリアマネージャーとして数字で回していました</li><li>理論原価と実原価のズレを現場で潰し、人時売上からシフトを組む側にいた人間です</li></ul></div>
+      <div class="card how rv d1"><span class="how-n">2<img class="how-icon" src="img/icons/how-delivery-checklist.png" width="384" height="384" loading="lazy" alt="デリバリーバイクと伝票のチェックリスト"></span><h3>飲食店の段取りが、最初から分かる</h3><ul class="clean"><li>デリバリーの着金、店舗別の部門管理、インフォマートは<b>最初から分かっているので、社長への聞き取りが発生しません</b></li><li>「他の会社さんではこうしていますよ」と、<b>飲食4社・15店舗の運用から提案</b>します</li></ul></div>
+      <div class="card how rv d2"><span class="how-n">3<img class="how-icon" src="img/icons/how-cash-inventory.png" width="384" height="384" loading="lazy" alt="現金袋と棚卸のクリップボード"></span><h3>届く資料そのものを変える</h3><ul class="clean"><li><b>現金を店に残さない運用</b>を先に作ります。夜間金庫で当日入金、小口はカードに</li><li><b>棚卸を習慣にします</b>。毎月入れてもらい、定着するまでリマインド</li></ul></div>
     </div>
   </div>
 </section>
@@ -713,7 +777,7 @@ footer{font-size:14px}
   <div class="wrap">
     <div class="sec-head rv"><img class="section-icon" src="img/icons/accounting-ai.png" width="384" height="384" loading="lazy" alt="帳簿と資金繰りを表す青い線画"><p class="en">What</p><h2>お引き受けしていること</h2><p>飲食店専門の経理代行です。決算をお願いしている税理士の先生は、そのままで大丈夫です。<br><b>建設・建築業の経理はお引き受けしていません。</b></p></div>
     <div class="grid2">
-      <div class="card rv"><h3>日々の経理を、丸ごと</h3><ul class="clean"><li>記帳・請求書の受け取りと発行・紙の書類のデータ化</li><li>必要に応じて<b>総務・人事</b>まで</li><li>やり取りはオンラインで完結。全国対応です</li></ul></div>
+      <div class="card rv"><h3>日々の経理を、丸ごと</h3><ul class="clean"><li>記帳・請求書の受け取りと発行・紙の書類のデータ化</li><li>必要に応じて<b>総務</b>まで</li><li>やり取りはオンラインで完結。全国対応です</li></ul></div>
       <div class="card rv d1"><h3>必ず一緒にお渡しするもの</h3><ul class="clean"><li><b>資金繰り表</b>：半年先の現預金がいくら残るか</li><li><b>現金残高のズレ</b>：店ごとの過不足を毎月</li><li><b>店舗別のFL</b>：本部費は按分せず、全店で賄う見せ方に</li></ul></div>
     </div>
   </div>
@@ -753,6 +817,7 @@ footer{font-size:14px}
 <section id="past" class="tint">
   <div class="narrow">
     <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/referral-trophy.png" width="384" height="384" loading="lazy" alt="握手をあしらったゴールデンリファーラルのトロフィー"><p class="en">Thank You</p><h2>これまでの<wbr><span class="nowrap">ゴールデンリファーラル</span></h2><p>ご紹介くださった皆さま、本当にありがとうございます。</p></div>
+    <details class="past-acc rv"><summary><span>紹介の流れと、お役に立てたことを見る（3件）</span></summary>
     <div class="past rv">
       <div class="past-i"><p class="past-who">公認会計士の先生</p>
         <dl><dt>紹介の流れ</dt><dd>ディレクターからご紹介いただき、1to1で先生の事務所の状況を伺いました</dd>
@@ -764,6 +829,7 @@ footer{font-size:14px}
         <dl><dt>紹介の流れ</dt><dd>採用支援をしているメンバーのご家族の会社で、「AIを活用したい」という話が出ていました。それを私につないでくださいました</dd>
         <dt>お役に立てたこと</dt><dd>社内でのAI活用をお手伝いすることになり、ご契約をいただきました</dd></dl></div>
     </div>
+    </details>
   </div>
 </section>
 
@@ -936,6 +1002,8 @@ AIの活用をご一緒できそうな方がいるので、ご紹介させてく
 もともとラーメン店のエリアマネージャーで、店の数字が分かる方です。
 飲食店の経理を丸ごと引き受けて、原価率は週1回、資金繰り表は毎月、確定を待たずに返してくれます。
 7店舗から15店舗に増える間、本社の経理担当がゼロ人のままだった会社もあるそうです✨
+石島さんの1to1シートはこちらです！
+https://livemissionjapan.github.io/ishijima-1to1/
 
 石島さん
 △△リージョン △△チャプターで、△△をされている○○さんをご紹介します！
@@ -954,14 +1022,14 @@ AIの活用をご一緒できそうな方がいるので、ご紹介させてく
 <section id="voices" class="tint">
   <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/message.png" width="384" height="384" loading="lazy" alt="お客様から届いた声を表す封筒"><p class="en">Voices</p><h2>お客様の声</h2><p>どんな方の、どんな困りごとが、どう解決したのか。合同会社LMJの公式サイトに掲載しているお客様の声から整理しました。</p></div>
   <div class="flow" data-speed="0.5"><div class="flow-track">
-      <div class="vcard"><p class="who">年商5億円規模の飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>バックオフィスの人を採用しても、教育に手間がかかり、辞められる心配がいつもあった</dd><dt class="fix">どう解決したか</dt><dd>経理だけでなくバックオフィス業務をまるごとLMJへ。教育も離職の心配もいらなくなり「LMJさんがいなかったら、今のうちの会社は成り立っていません」とのお声をいただいています</dd></dl></div>
-      <div class="vcard"><p class="who">16店舗を展開する飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>社内に経理スタッフはいるが、まだ経験が浅い</dd><dt class="fix">どう解決したか</dt><dd>経理のサポートと一緒に、スタッフさんの教育もLMJが担当。細かいところまで手が届く対応で、社内の経理が回るようになりました</dd></dl></div>
-      <div class="vcard"><p class="who">エステサロンの社長</p><dl><dt class="pain">困りごと</dt><dd>奥様が経理を担当していて、夫婦ともに時間の余裕がなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに切り出しました。時間に余裕ができて家族で出かける機会が増え、本業の売上も伸びました</dd></dl></div>
-      <div class="vcard"><p class="who">従業員を抱える会社の社長</p><dl><dt class="pain">困りごと</dt><dd>経理担当を自社で採用・教育するには、コストもリスクも大きい</dd><dt class="fix">どう解決したか</dt><dd>財務の状況をスピードを上げて見える化し、不要なコストを削減。その数字を現場に共有したことで、従業員が自分で考えて動く組織に育っています</dd></dl></div>
-      <div class="vcard"><p class="who">リセール事業の社長</p><dl><dt class="pain">困りごと</dt><dd>税理士さんに全部を丸投げしていて、毎月のコストが高かった</dd><dt class="fix">どう解決したか</dt><dd>記帳代行だけをLMJに移しました。税理士さんはそのままで、月1万5,000円のコスト削減</dd></dl></div>
-      <div class="vcard"><p class="who">オンラインサロンの運営者</p><dl><dt class="pain">困りごと</dt><dd>経理まわりのストレスで、新しいことに手が回らなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに任せてストレスが激減。新規事業を3つ立ち上げ、1年で会社の規模が2億円を超えました</dd></dl></div>
-      <div class="vcard"><p class="who">グラフィックデザイナー</p><dl><dt class="pain">困りごと</dt><dd>請求書の作成と送付、入金の確認が苦手で、制作に集中できない時があった</dd><dt class="fix">どう解決したか</dt><dd>その業務をLMJが引き受け、煩わしい作業から解放されて、好きな制作に集中できるようになりました</dd></dl></div>
-      <div class="vcard"><p class="who">フリーカメラマン</p><dl><dt class="pain">困りごと</dt><dd>管理や書類整理がどうしても苦手</dd><dt class="fix">どう解決したか</dt><dd>書類の送付日が近づくと、LMJから「まだですか」と声をかけています。経営が苦しい時期には、資金面の相談にも乗りました</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/restaurant.png" width="384" height="384" loading="lazy" draggable="false" alt="飲食店"><p class="who">年商5億円規模の飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>バックオフィスの人を採用しても、教育に手間がかかり、辞められる心配がいつもあった</dd><dt class="fix">どう解決したか</dt><dd>経理だけでなくバックオフィス業務をまるごとLMJへ。教育も離職の心配もいらなくなり「LMJさんがいなかったら、今のうちの会社は成り立っていません」とのお声をいただいています</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-restaurant-stores.png" width="384" height="384" loading="lazy" draggable="false" alt="複数店舗を展開する飲食店"><p class="who">16店舗を展開する飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>社内に経理スタッフはいるが、まだ経験が浅い</dd><dt class="fix">どう解決したか</dt><dd>経理のサポートと一緒に、スタッフさんの教育もLMJが担当。細かいところまで手が届く対応で、社内の経理が回るようになりました</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-spa.png" width="384" height="384" loading="lazy" draggable="false" alt="タオルと植物のエステサロン"><p class="who">エステサロンの社長</p><dl><dt class="pain">困りごと</dt><dd>奥様が経理を担当していて、夫婦ともに時間の余裕がなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに切り出しました。時間に余裕ができて家族で出かける機会が増え、本業の売上も伸びました</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-office-team.png" width="384" height="384" loading="lazy" draggable="false" alt="オフィスと従業員"><p class="who">従業員を抱える会社の社長</p><dl><dt class="pain">困りごと</dt><dd>経理担当を自社で採用・教育するには、コストもリスクも大きい</dd><dt class="fix">どう解決したか</dt><dd>財務の状況をスピードを上げて見える化し、不要なコストを削減。その数字を現場に共有したことで、従業員が自分で考えて動く組織に育っています</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-resale.png" width="384" height="384" loading="lazy" draggable="false" alt="段ボールと循環の矢印"><p class="who">リセール事業の社長</p><dl><dt class="pain">困りごと</dt><dd>税理士さんに全部を丸投げしていて、毎月のコストが高かった</dd><dt class="fix">どう解決したか</dt><dd>記帳代行だけをLMJに移しました。税理士さんはそのままで、月1万5,000円のコスト削減</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-online-salon.png" width="384" height="384" loading="lazy" draggable="false" alt="ノートPCと吹き出し"><p class="who">オンラインサロンの運営者</p><dl><dt class="pain">困りごと</dt><dd>経理まわりのストレスで、新しいことに手が回らなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに任せてストレスが激減。新規事業を3つ立ち上げ、1年で会社の規模が2億円を超えました</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-designer.png" width="384" height="384" loading="lazy" draggable="false" alt="ペンとカラーパレット"><p class="who">グラフィックデザイナー</p><dl><dt class="pain">困りごと</dt><dd>請求書の作成と送付、入金の確認が苦手で、制作に集中できない時があった</dd><dt class="fix">どう解決したか</dt><dd>その業務をLMJが引き受け、煩わしい作業から解放されて、好きな制作に集中できるようになりました</dd></dl></div>
+      <div class="vcard"><img class="voice-icon" src="img/icons/voice-camera.png" width="384" height="384" loading="lazy" draggable="false" alt="カメラ"><p class="who">フリーカメラマン</p><dl><dt class="pain">困りごと</dt><dd>管理や書類整理がどうしても苦手</dd><dt class="fix">どう解決したか</dt><dd>書類の送付日が近づくと、LMJから「まだですか」と声をかけています。経営が苦しい時期には、資金面の相談にも乗りました</dd></dl></div>
     </div>
   </div>
 </section>
@@ -987,7 +1055,7 @@ AIの活用をご一緒できそうな方がいるので、ご紹介させてく
     <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/accounting-ai.png" width="384" height="384" loading="lazy" alt="経歴と実績をまとめた帳簿のイラスト"><p class="en">1to1 Sheet &amp; GAINS</p><h2>1to1シート・GAINSシート</h2><p>BNIの公式書式に沿った内容を、そのままご覧いただけます。</p></div>
 
     <div class="sheet on rv" id="s-prof">
-      <h3>基本情報</h3>
+      <h3>基本情報<img class="sheet-heading-icon" src="img/icons/sheet-profile.png" width="384" height="384" loading="lazy" alt="名刺とクリップボード"></h3>
       <table class="prof">
         <tr><th scope="row">所属リージョン</th><td>横浜セントラルリージョン</td></tr>
         <tr><th scope="row">所属チャプター</th><td>Trustチャプター（ディレクター：三宅 健一さん）</td></tr>
@@ -1000,65 +1068,58 @@ AIの活用をご一緒できそうな方がいるので、ご紹介させてく
       <table class="prof">
         <tr><th scope="row">事業</th><td>① <b>経理代行</b>（合同会社LMJ）― 本業。飲食店に特化<br>② <b>AI研修</b> ― 趣味が講じて、いまは上場企業の部署にも入っています</td></tr>
         <tr><th scope="row">所在地</th><td>茨城県筑西市 ／ 対応範囲はオンラインで全国</td></tr>
-        <tr><th scope="row">専門分野</th><td>飲食店の経理・総務・人事の代行と、資金繰り・財務の相談</td></tr>
-        <tr><th scope="row">経験年数</th><td>10年（2016年開業）</td></tr>
-        <tr><th scope="row">過去に経験した職業</th><td>ラーメン店のエリアマネージャー、ガソリンスタンド、パチンコ店ほか、ほぼサービス業ばかり<b>20職種ほど</b></td></tr>
+        <tr><th scope="row">専門分野</th><td>飲食店の経理・総務の代行と、資金繰り・財務の相談</td></tr>
+        <tr><th scope="row">経験年数</th><td>2016年10月に開業し、<b>11年目</b>に入りました</td></tr>
+        <tr><th scope="row">法人</th><td>2022年に法人成り（合同会社LMJ）。現在<b>5期目</b>です</td></tr>
+        
       </table>
       <h3>個人的な情報</h3>
       <table class="prof">
-        <tr><th scope="row">家族</th><td>妻・長男（11歳・小5）・長女（8歳・小3）の4人家族。妻は飲食店専門のデザイン会社でチーフデザイナーをしています（担当先に115店舗・130店舗規模のチェーンあり）</td></tr>
-        <tr><th scope="row">出身・居住</th><td>滋賀県高島市 出身／茨城県筑西市 在住（関東歴13年）</td></tr>
+        <tr><th scope="row">家族</th><td>妻（ちえちゃん）・長男（けいご・11歳・小5）・長女（いちか・8歳・小3）の4人家族です。<br><br>ちえちゃんは、飲食店専門のデザイン会社のチーフデザイナーです。<br>担当先には、115店舗・130店舗規模のチェーンもあります。<br>私より仕事ができるという噂があり、頭が上がりません！</td></tr>
+        <tr><th scope="row">出身・居住</th><td>滋賀県高島市 出身<br>茨城県筑西市 在住（関東歴13年）</td></tr>
         <tr><th scope="row">人生の目標</th><td><b>「誰かの支えになり、『出会えてよかった』と思われる人になる。」</b></td></tr>
-        <tr><th scope="row">趣味</th><td>AI ／ ゲーム（ドラクエ・龍が如く） ／ 車（次はミニクーパーを狙っています）。AIは<b>子どもとのコミュニケーションの道具</b>でもあります</td></tr>
+        <tr><th scope="row">趣味</th><td>AI（子どもと一緒にゲームを作っています）<br>ゲーム（ドラクエ・龍が如く）<br>車（次はミニクーパーを狙っています）<br><br>AIは<b>子どもとのコミュニケーションの道具</b>でもあります</td></tr>
       </table>
       <div class="photos">
         <figure><img loading="lazy" src="img/karaage.jpg" alt="元祖唐揚げ本舗"><figcaption>元祖唐揚げ本舗</figcaption></figure>
         <figure><img loading="lazy" src="img/harepan.jpg" alt="晴れぱん"><figcaption>晴れぱん</figcaption></figure>
-        <figure><img loading="lazy" src="img/sushi.jpg" alt="実家の寿司屋"><figcaption>実家の寿司屋を手伝っている時のイメージ</figcaption></figure>
+        <figure><img loading="lazy" src="img/family.jpg" alt="石島家の4人家族"><figcaption>ちえちゃん・けいご・いちかと4人家族</figcaption></figure>
       </div>
     </div>
 
     <div class="sheet on" id="s-gains">
-      <h3>GAINSシート</h3>
+      <h3>GAINSシート<img class="sheet-heading-icon" src="img/icons/sheet-goals.png" width="384" height="384" loading="lazy" alt="目標の旗"></h3>
       <table class="gains"><tbody>
-      <tr class="gains-row"><th scope="row"><div class="k">Goals<small>目標</small></div></th><td><ul class="clean">
-        <li>BNI経由で年間売上 +1,000万円／継続契約10社（2028年4月末まで）　※現在 2件</li>
-        <li>スタッフさんにとって「人生で最後の会社」と思える環境をつくる／社員の平均年収600万円！</li>
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/sheet-goals.png" width="384" height="384" loading="lazy" alt="階段の先に立つ目標の旗"><div class="k"><span>Goals</span><small>目標</small></div></div></th><td><ul class="clean">
+        <li>BNI経由で年間売上 +1,000万円／継続契約10社（2028年4月末まで）<br><b>進捗20%（現在200万円）</b></li>
+        <li>社員の平均年収600万円！</li>
         <li>60歳で売上50億円！</li>
-        <li><b>AI活用のゴール</b>は、<b>自分の経理代行部門をAIで置き換えて「無くす」</b>こと。スタッフには「AIを使う前の自分の仕事を全部AIに任せることができたら合格！」と言っています。1つの事業体をAIで置き換えられたら、それ自体が新しい商品になるからです</li></ul></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Accomplish<wbr>ments<small>実績</small></div></th><td><ul class="clean">
-        <li>事業歴10年／顧客24社／社員3名・パート2名・外注3名の体制</li>
-        <li>飲食15店舗・スタッフ150名の会社 ― 経理担当の退職をきっかけに、<b>経理・総務・人事をまるごと</b>巻き取り。<b>7店舗から15店舗に増える間、本社の経理担当はゼロ人のまま</b>。書類の開封からFAXの処理まで全て弊社で行っています</li>
+</ul></td></tr>
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/referral-trophy.png" width="384" height="384" loading="lazy" alt="実績を表すトロフィー"><div class="k"><span>Accomplish<wbr>ments</span><small>実績</small></div></div></th><td><ul class="clean">
+        <li>事業歴11年目／顧客24社／社員3名・パート2名・外注2名の体制</li>
+ <li><b>BNI：2026年5月に入会し、5ヶ月で100点メンバー</b>になりました</li>
+        <li>飲食15店舗・スタッフ150名の会社 ― 経理担当の退職をきっかけに、<b>経理・総務をまるごと</b>巻き取り。<b>7店舗から15店舗に増える間、本社の経理担当はゼロ人のまま</b>。書類の開封からFAXの処理まで全て弊社で行っています</li>
         <li>ラーメンチェーン 直営20店舗・スタッフ200名＋FC国内外20店舗 ― 経理代行に加えて、<b>資金繰りと財務の相談</b>まで</li>
 </ul></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Interests<small>興味</small></div></th><td><ul class="clean">
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/gains-interests.png" width="384" height="384" loading="lazy" alt="AIへの興味を表す回路入りの電球"><div class="k"><span>Interests</span><small>興味</small></div></div></th><td><ul class="clean">
         <li>組織化 ― 社長が現場から抜けるための仕組みづくり。<b>代表がプレイングマネージャー</b>をやっているのは、ものすごい価値の損失だと思っています。守りは弊社が持つので、社長には価値を届けることに時間を使ってほしい</li>
         <li>AI ― 子どもとゲームを作るほど生活に溶け込んでいます。趣味が講じて、いまは上場企業の部署にAI研修で入るまでに</li></ul></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Networks<small>人脈</small></div></th><td><ul class="clean">
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/gains-networks.png" width="384" height="384" loading="lazy" alt="つながりを表す3人のネットワーク"><div class="k"><span>Networks</span><small>人脈</small></div></div></th><td><ul class="clean">
         <li>飲食店・ラーメン店の経営者ネットワーク ― 前職からのつながり</li>
-        <li>つくばライオンズクラブ ／ BNI Trustチャプター（メンバーブックは <a href="https://drive.google.com/drive/folders/117PgxelW7J7H0ZNAOU5A_2YL2JhWsIDm" target="_blank" rel="noopener">こちら</a>）</li></ul></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Skills<small>スキル</small></div></th><td><ul class="clean">
+        <li>つくばライオンズクラブ ／ BNI Trustチャプター<br><a class="book-link" href="https://drive.google.com/drive/folders/117PgxelW7J7H0ZNAOU5A_2YL2JhWsIDm" target="_blank" rel="noopener">Trustのメンバーブックを開く <span aria-hidden="true">→</span></a></li></ul></td></tr>
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/gains-skills.png" width="384" height="384" loading="lazy" alt="実務のスキルを表す工具と鉛筆"><div class="k"><span>Skills</span><small>スキル</small></div></div></th><td><ul class="clean">
         <li>日商簿記1級</li>
-        <li>ITに詳しくない主婦のパートさんを、AIエージェントで実務が回せるところまで育成。現在全員AIエージェントを使って仕事をしています。人を増やさずに事務を回したい経営者、これから拡大したい経営者に効きます</li>
-        <li>攻めと守りの両方を経験している ― 融資を引いて店舗を増やす側と、数字を締める側の両方。税理士・会計士の先生から「そこまでできる人は珍しい」と言われます</li>
+        <li>ITが苦手なパートさんも、AIで実務を回せるまで育てました。いまは全員がAIで仕事をしています！</li>
         <li>自動車整備士3級</li></ul></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Wish<small>強い願望</small></div></th><td><p>社員さんやスタッフさんが<b>「この会社で働けてよかった」</b>と感じられる会社にすること。「自分の人生にこの会社が必要だ」と感じてもらえたら100点！</p></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Secret<small>誰も知らない私</small></div></th><td><p>実は、<b>コミュニケーションが苦手</b>です。実家の寿司屋で、小学生の頃からカウンターの常連さんの話し相手をしていました。酔ったお客さんには、ニコニコうなずくだけで会話が成り立ちます。表面的な会話は得意でも、相手に深く興味を持って尋ねるのは苦手なまま。だからBNIは<b>自分を育てる場</b>だと思って入りました。</p></td></tr>
-      <tr class="gains-row"><th scope="row"><div class="k">Key<small>私の成功の鍵</small></div></th><td><p>まずは<b>人としての在り方</b>。お客様に喜ばれ、満足していただくことを積み重ねる。<b>最大の報酬は「次のお仕事の受注」</b>だと思っています。</p></td></tr>
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/gains-wish.png" width="384" height="384" loading="lazy" alt="スタッフの幸せを願うハートと両手"><div class="k"><span>Wish</span><small>強い願望</small></div></div></th><td><p>社員さんやスタッフさんが<b>「この会社で働けてよかった」</b>と感じられる会社にすること。「自分の人生にこの会社が必要だ」と感じてもらえたら100点！</p></td></tr>
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/listening.png" width="384" height="384" loading="lazy" alt="耳と会話の吹き出し"><div class="k"><span>Secret</span><small>誰も知らない私</small></div></div></th><td><p>実は、<b>人の話を深く聞くのが苦手</b>です。<br>実家の寿司屋で、酔ったお客さんにニコニコうなずくだけで会話が成り立ってしまい、それに慣れてしまいました。<br>だからBNIは、<b>自分を育てる場</b>だと思って参加しています！</p></td></tr>
+      <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/message.png" width="384" height="384" loading="lazy" alt="信頼をつなぐメッセージ"><div class="k"><span>Key</span><small>私の成功の鍵</small></div></div></th><td><p>まずは<b>人としての在り方</b>。お客様に喜ばれ、満足していただくことを積み重ねる。<b>最大の報酬は「次のお仕事の受注」</b>だと思っています。</p></td></tr>
       </tbody></table>
       <div class="pdf"><a class="btn btn-ghost" href="pdf/ishijima_1to1_sheet.pdf" target="_blank" rel="noopener"> PDFで開く（略歴・GAINS） <span class="ar">→</span></a></div>
     </div>
   </div>
 </section>
 
-<div class="contact" id="contact">
-  <div class="wrap">
-    <p class="eyebrow rv">Contact</p>
-    <h2 class="rv">1to1のご希望・お繋ぎのご相談は</h2>
-    <p class="rv d1">Facebookメッセンジャーからお気軽にどうぞ。<br>「石島さんに繋ぎたい人がいる」の一言で大丈夫です。</p>
-    <p class="rv d2"><a class="btn btn-orange" href="https://www.facebook.com/ryota.challenger" target="_blank" rel="noopener">Facebookでメッセージを送る <span class="ar">→</span></a></p>
-  </div>
-</div>
 
 <footer>
   合同会社LMJ ／ 石島 亮太 ／ 茨城県筑西市伊讃美485-5 ／ <a href="https://livemissionjapan.com/" target="_blank" rel="noopener">livemissionjapan.com</a> ／ BNI Trustチャプター<br>

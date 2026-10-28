@@ -4,182 +4,449 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>このページ、実はAIで全部つくれます</title>
+<title>BNIで毎週使える、AIの指示文集</title>
+<meta name="description" content="コピーして、【　】を埋めて、AIに貼るだけ。BNIの毎週の活動で使える7つの指示文。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;600;700;800;900&family=Noto+Serif+JP:wght@700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;600;700;800;900&amp;family=Noto+Serif+JP:wght@700;800&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet">
 <style>
-:root{--blue:#245b9e;--navy:#16344d;--ink:#243642;--muted:#465e6d;--line:#b1c3ce;--paper:#f8f5ee;--sky:#eaf3fa;--aqua:#e9f5f7;--gold:#bd8a42;--orange:#a65a28;--sans:'Noto Sans JP','Hiragino Sans',sans-serif;--serif:'Noto Serif JP','Hiragino Mincho ProN',serif;--disp:'Manrope',sans-serif}
+:root{--blue:#245b9e;--navy:#16344d;--ink:#243642;--muted:#526876;--line:#c3d5e1;--paper:#f8f5ee;--sky:#eaf3fa;--gold:#bd8a42;--orange:#a65a28;--sans:'Noto Sans JP','Hiragino Sans',sans-serif;--serif:'Noto Serif JP','Hiragino Mincho ProN',serif;--disp:'Manrope',sans-serif}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);font-size:18px;font-weight:500;line-height:2;-webkit-font-smoothing:antialiased}
-a{color:var(--blue);text-underline-offset:5px;text-decoration-thickness:2px;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:94px}
+body{margin:0;background:var(--paper);color:var(--ink);font:500 17px/1.95 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-underline-offset:5px}
+a,button{-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer}
 :focus-visible{outline:3px solid var(--blue);outline-offset:5px}
 img{display:block;max-width:100%;height:auto}
-h1,h2,h3{margin:0;color:var(--navy);font-weight:800;overflow-wrap:anywhere}
-h1,h2{font-family:var(--serif);letter-spacing:.02em}
-h1{font-size:clamp(32px,3.4vw,45px);line-height:1.65}
-h2{font-size:clamp(28px,2.8vw,36px);line-height:1.65}
-h3{font-size:25px;line-height:1.7}
-p{margin:0}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{color:var(--navy);font-weight:800;overflow-wrap:anywhere}
 .wrap{width:min(100%,1120px);margin-inline:auto;padding-inline:48px}
-.top{background:#fff;border-bottom:2px solid var(--line)}
-.top .wrap{min-height:86px;display:flex;align-items:center}
-.brand{display:inline-flex;padding-block:12px}
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line)}
+.top .wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;min-height:48px;flex-shrink:0}
 .brand img{width:105px}
-.hero{background:linear-gradient(110deg,#fff 30%,#edf5fa 100%);padding:72px 0 62px}
-.hero-heading{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:40px;align-items:center;margin-bottom:28px}
-.hero-heading img{width:160px;height:160px;object-fit:contain}
-.hero h1::before{content:'';display:block;width:48px;height:5px;background:var(--gold);margin-bottom:24px;border-radius:2px}
-.intro{max-width:880px;line-height:2.15}
-.bookmark{position:relative;margin-top:30px;padding:24px 28px 24px 48px;border:2px solid #e2c79e;border-left:5px solid var(--gold);border-radius:0 8px 8px 0;background:#fff8e9;font-weight:800;color:var(--navy);font-size:20px;line-height:1.9}
-.bookmark::before{content:'';position:absolute;left:20px;top:30px;width:12px;height:20px;background:var(--gold);clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%)}
-.steps-section{padding:76px 0 80px}
-.section-heading{display:flex;align-items:center;gap:22px;margin-bottom:32px}
-.section-heading::after{content:'';height:2px;background:var(--line);flex:1;min-width:20px}
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:20px}
-.step{position:relative;display:grid;grid-template-columns:62px minmax(0,1fr) 86px;grid-template-rows:auto auto;column-gap:24px;row-gap:12px;padding:30px 32px;border:2px solid #cedee8;border-radius:9px;background:#fff}
-.step:nth-child(even){background:#f5f9fc}
-.step-number{grid-column:1;grid-row:1/3;align-self:start;font-family:var(--disp);color:var(--blue);font-size:40px;font-weight:800;line-height:1.35;font-variant-numeric:tabular-nums}
-.step h3{grid-column:2;grid-row:1;align-self:center}
-.step p{grid-column:2;grid-row:2;line-height:2}
-.step img{grid-column:3;grid-row:1/3;width:86px;height:86px;object-fit:contain;align-self:center}
-.tools{padding:64px 0;background:var(--paper);border-top:2px solid #e4d8bf}
-.tools .wrap{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;align-items:start}
-.tool-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.tool-list li{position:relative;padding-left:22px;font-weight:700;overflow-wrap:anywhere}
-.tool-list li::before{content:'';position:absolute;left:0;top:.85em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.contact{padding:68px 0 72px;background:var(--navy);color:#fff}
-.contact h2{color:#fff;max-width:850px}
-.contact p{margin-top:22px;font-size:22px;font-weight:700}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:60px;max-width:100%;margin-top:28px;padding:16px 26px;background:var(--orange);border:2px solid transparent;border-radius:7px;color:#fff;font-size:17px;font-weight:800;line-height:1.8;text-align:center;text-decoration:none;transition:background .2s}
-.btn:hover{background:#87491f}
+.top-link{display:inline-flex;align-items:center;gap:12px;min-height:48px;font-size:14px;font-weight:800;text-decoration:none}
+.top-link::after{content:'';width:8px;height:8px;border-right:2px solid;border-bottom:2px solid;transform:rotate(45deg);margin-top:-5px}
+.hero{padding:56px 0 42px;background:linear-gradient(120deg,#fff 30%,var(--sky) 100%);border-bottom:1px solid var(--line)}
+.hero-heading{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:32px;align-items:center;margin-bottom:24px}
+.hero-heading img{width:112px;height:112px;object-fit:contain}
+h1{font-family:var(--serif);font-size:clamp(30px,3.15vw,40px);line-height:1.65;letter-spacing:.015em}
+h1::before{content:'';display:block;width:45px;height:5px;border-radius:3px;background:var(--gold);margin-bottom:20px}
+.lead{line-height:2.1}
+.lead strong{font-weight:800;color:var(--navy)}
+.steps-title{font-size:17px;margin:30px 0 12px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;list-style:none;margin:0;padding:0;counter-reset:step}
+.steps li{display:flex;align-items:flex-start;gap:12px;padding:18px 16px;background:#fff;border:1px solid var(--line);border-radius:8px;font-size:15px;font-weight:700;line-height:1.85;counter-increment:step}
+.steps li::before{content:counter(step);display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:50%;background:var(--blue);color:white;font:800 16px var(--disp)}
+.toc{padding:32px 0 36px;scroll-margin-top:16px}
+.toc h2{font-size:18px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.chips li{max-width:100%}
+.chips a{display:flex;align-items:center;gap:10px;min-height:48px;padding:11px 17px;border:1px solid #b1c9da;border-radius:26px;background:white;font-size:14px;font-weight:700;line-height:1.7;text-decoration:none;transition:background .15s,border-color .15s}
+.chips a:hover{background:var(--sky);border-color:var(--blue)}
+.chip-number{font:800 15px var(--disp);color:var(--blue);flex-shrink:0}
+.prompts{display:grid;gap:28px;padding-bottom:56px}
+.prompt-card{min-width:0;scroll-margin-top:16px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:10px;padding:30px 32px 32px;box-shadow:0 8px 26px #16344d05}
+.card-head{display:grid;grid-template-columns:52px minmax(0,1fr) 70px;gap:18px;align-items:start}
+.card-number{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--sky);color:var(--blue);font:800 24px var(--disp)}
+.card-title{min-width:0}
+.card-title h2{font-size:25px;line-height:1.65;letter-spacing:.015em}
+.frequency{display:inline-block;max-width:100%;margin-top:10px;padding:4px 12px;border:1px solid #e0c599;border-radius:6px;background:#fff8e9;color:#754b1d;font-size:13px;font-weight:700;line-height:1.8;overflow-wrap:anywhere}
+.card-head img{width:70px;height:70px;object-fit:contain}
+.scene{margin:20px 0;color:var(--muted);font-size:16px;line-height:1.9}
+.scene strong{font-weight:800;color:var(--navy)}
+.prompt-box{border:1px solid var(--line);border-radius:8px;background:#f4f8fb}
+.prompt-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:13px 20px}
+.prompt-label{color:var(--blue);font-size:14px;font-weight:800}
+.copy{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:11px 20px;background:var(--blue);border:0;border-radius:6px;color:#fff;font-size:16px;font-weight:800;line-height:1.7;transition:background .15s}
+.copy::before{content:'';width:12px;height:15px;border:1.5px solid currentColor;border-radius:1px;box-shadow:-3px -3px 0 -1px var(--blue),-3px -3px 0 0 currentColor;flex-shrink:0}
+.copy:hover,.copy.done{background:var(--navy)}
+.copy:disabled{cursor:wait}
+.prompt-text{margin:0;padding:24px;font:500 16px/2 var(--sans);white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;tab-size:2}
+.placeholder{color:#754b1d;background:#fff0cd;font-weight:700;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.card-bottom{display:flex;justify-content:flex-end;margin-top:16px}
+.toc-back{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700}
+.making{background:var(--sky);border-top:1px solid var(--line);padding:48px 0}
+.making-heading{display:flex;gap:22px;align-items:center;margin-bottom:26px}
+.making-heading img{width:78px;height:78px;object-fit:contain}
+.making h2{font-family:var(--serif);font-size:28px;line-height:1.7}
+.making ol{padding-left:1.6em;margin:0}
+.making li{padding:9px 0 9px 10px;font-weight:600;overflow-wrap:anywhere}
+.making li::marker{color:var(--blue);font-weight:800}
+.contact{padding:46px 0 50px;background:var(--navy);color:#fff}
+.contact p{max-width:860px;font-size:24px;font-weight:800;line-height:1.85}
+.facebook{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-height:58px;margin-top:26px;padding:15px 24px;background:var(--orange);border:2px solid transparent;border-radius:7px;color:#fff;text-decoration:none;font-size:17px;font-weight:800;line-height:1.8;text-align:center}
+.facebook:hover{background:#87491f}
 .contact :focus-visible{outline-color:#fff}
-footer{padding:30px 0 34px}
-.back{display:inline-flex;align-items:center;gap:14px;min-height:48px;font-size:16px;font-weight:700}
-.back::before{content:'';width:9px;height:9px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);flex-shrink:0}
+footer{background:#fff;padding:24px 0}
+.back{display:inline-flex;align-items:center;gap:12px;min-height:48px;font-size:16px;font-weight:700}
+.back::before{content:'';width:9px;height:9px;border-left:2px solid;border-bottom:2px solid;transform:rotate(45deg);flex-shrink:0}
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom));transform:translate(-50%,12px);z-index:30;max-width:calc(100% - 32px);width:max-content;padding:14px 22px;background:var(--navy);border:1px solid #93aec2;border-radius:8px;color:#fff;font-size:15px;font-weight:700;line-height:1.8;box-shadow:0 6px 24px #16344d26;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:760px){
-body{font-size:17px}
-.wrap{padding-inline:22px}
-.top .wrap{min-height:70px}
-.brand img{width:83px}
-.hero{padding:38px 0 40px}
-.hero-heading{display:block;position:relative;margin-bottom:24px;padding-top:76px}
-.hero-heading img{position:absolute;right:0;top:0;width:60px;height:60px;margin:0}
-h1{font-size:30px;line-height:1.7;letter-spacing:0}
-.hero h1::before{position:absolute;left:0;top:28px;width:36px;height:4px;margin:0}
-h2{font-size:27px;line-height:1.7;letter-spacing:0}
-h3{font-size:21px;line-height:1.65;letter-spacing:0}
-.intro{line-height:2.05}
-.bookmark{padding:20px 18px 20px 39px;font-size:18px;line-height:1.95;margin-top:25px}
-.bookmark::before{left:15px;top:27px;width:10px;height:17px}
-.steps-section{padding:46px 0 48px}
-.section-heading{gap:14px;margin-bottom:24px}
-.steps{gap:16px}
-.step{grid-template-columns:35px minmax(0,1fr) 50px;gap:16px 10px;padding:22px 18px}
-.step-number{grid-column:1;grid-row:1;font-size:30px;align-self:center}
-.step h3{grid-column:2;grid-row:1}
-.step img{grid-column:3;grid-row:1;width:50px;height:50px}
-.step p{grid-column:1/-1;grid-row:2;font-size:17px;line-height:2}
-.tools{padding:42px 0}
-.tools .wrap{grid-template-columns:1fr;gap:24px}
-.tool-list{gap:15px}
-.tool-list li{font-size:16px;padding-left:18px}
-.contact{padding:44px 0 46px}
-.contact p{font-size:21px;margin-top:20px}
-.btn{width:100%;font-size:16px;padding:16px 14px;margin-top:24px}
-footer{padding:22px 0}
-.back{font-size:15px;gap:10px}
+html{scroll-padding-top:82px}
+.wrap{padding-inline:20px}
+.top .wrap{min-height:64px}
+.brand img{width:85px}
+.top-link{font-size:13px}
+.hero{padding:30px 0}
+.hero-heading{grid-template-columns:minmax(0,1fr) 58px;gap:12px;margin-bottom:20px}
+.hero-heading img{width:58px;height:58px;align-self:start;margin-top:44px}
+h1{font-size:29px;line-height:1.7;letter-spacing:0}
+h1::before{margin-bottom:16px;width:36px;height:4px}
+.lead{font-size:16px;line-height:2}
+.steps-title{margin-top:24px}
+.steps{grid-template-columns:1fr;gap:9px}
+.steps li{align-items:center;padding:13px 14px;font-size:15px}
+.toc{padding:26px 0}
+.chips{gap:8px}
+.chips a{font-size:13px;padding:11px 13px;gap:8px;border-radius:18px}
+.prompts{gap:22px;padding-bottom:34px}
+.prompt-card{padding:20px 16px 16px;border-radius:8px}
+.card-head{grid-template-columns:38px minmax(0,1fr) 42px;gap:10px}
+.card-number{width:38px;height:38px;font-size:20px}
+.card-title h2{font-size:21px;letter-spacing:0;line-height:1.65}
+.card-head img{width:42px;height:42px}
+.frequency{font-size:12px;padding:4px 8px;margin-top:8px}
+.scene{font-size:15px;margin:16px 0}
+.prompt-toolbar{padding:12px;gap:8px}
+.prompt-label{font-size:13px}
+.copy{padding:11px 14px;gap:10px;font-size:15px}
+.prompt-text{padding:18px 14px;font-size:16px;line-height:1.95}
+.card-bottom{margin-top:8px}
+.making{padding:32px 0}
+.making-heading{gap:14px;margin-bottom:18px}
+.making-heading img{width:50px;height:50px}
+.making h2{font-size:24px}
+.making li{font-size:16px;padding-left:4px}
+.contact{padding:32px 0 36px}
+.contact p{font-size:21px}
+.facebook{width:100%;padding:14px 12px;font-size:16px}
+footer{padding:18px 0}
+.back{font-size:15px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before{transition:none!important}}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="石島の1to1シートに戻る"><img src="img/lmj-logo.png" alt="LMJ" width="421" height="93"></a>
-  </div>
-</header>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="石島の1to1シートに戻る"><img src="img/lmj-logo.png" alt="LMJ" width="421" height="93"></a>
+  <a class="top-link" href="#contents">7つの場面から選ぶ</a>
+</div></header>
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-heading">
-        <h1>このページ、実はAIで全部つくれます</h1>
-        <img src="img/icons/voice-designer.png" alt="青いパレットとペンのイラスト" width="160" height="160">
-      </div>
-      <p class="intro">石島の1to1シートは、文章もデザインもイラストも動画も、AIと一緒につくりました。<br>作り方をまとめておきます。</p>
-    </div>
-  </section>
-  <section class="steps-section" aria-labelledby="steps-title">
-    <div class="wrap">
-      <div class="section-heading"><h2 id="steps-title">つくり方 7ステップ</h2></div>
-      <ol class="steps">
-        <li class="step">
-          <span class="step-number">1.</span>
-          <h3>材料を集める</h3>
-          <img src="img/icons/how-delivery-checklist.png" alt="材料をまとめるチェックリストのイラスト" width="86" height="86" loading="lazy">
-          <p>1to1やウィークリープレゼンの文字起こし、今の1to1シート、お客様の声を集めます。<br>AIは、材料が多いほど「その人らしい」文章を書けます！</p>
-        </li>
-        <li class="step">
-          <span class="step-number">2.</span>
-          <h3>構成をAIと考える</h3>
-          <img src="img/icons/listening.png" alt="相談して考えるイラスト" width="86" height="86" loading="lazy">
-          <p>BNIの公式ブログやポッドキャストの内容を読ませて、「紹介が生まれる1to1シートにするには？」を相談します。<br>どこを残して、どこを削るかも一緒に決めます。</p>
-        </li>
-        <li class="step">
-          <span class="step-number">3.</span>
-          <h3>文章を自分の言葉に直す</h3>
-          <img src="img/icons/sheet-profile.png" alt="自分らしい文章をまとめるシートのイラスト" width="86" height="86" loading="lazy">
-          <p>AIの下書きを、自分の言葉に直します。<br>語尾や言い回しを自分らしくするのが一番大事です！</p>
-        </li>
-        <li class="step">
-          <span class="step-number">4.</span>
-          <h3>デザインはAIに任せる</h3>
-          <img src="img/icons/how-store-numbers.png" alt="画面の構成を整えるイラスト" width="86" height="86" loading="lazy">
-          <p>「文字を太く」「画像を増やして楽しく」のように、感想を伝えるだけで作り直してくれます。</p>
-        </li>
-        <li class="step">
-          <span class="step-number">5.</span>
-          <h3>イラストもAIで描く</h3>
-          <img src="img/icons/voice-designer.png" alt="イラストを描くパレットとペンのイラスト" width="86" height="86" loading="lazy">
-          <p>このページのアイコンは、すべてAIで描きました。</p>
-        </li>
-        <li class="step">
-          <span class="step-number">6.</span>
-          <h3>使い方の動画もAIでつくる</h3>
-          <img src="img/icons/voice-camera.png" alt="動画づくりを表すカメラのイラスト" width="86" height="86" loading="lazy">
-          <p>画面のキャプチャーと、AIで再現した自分の声で、46秒の動画にしました。</p>
-        </li>
-        <li class="step">
-          <span class="step-number">7.</span>
-          <h3>無料で公開する</h3>
-          <img src="img/icons/message.png" alt="URLを届けるメッセージのイラスト" width="86" height="86" loading="lazy">
-          <p>GitHub Pages という無料の仕組みで公開しています。<br>URLひとつで、誰にでも渡せます。</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-  <section class="tools" aria-labelledby="tools-title">
-    <div class="wrap">
-      <h2 id="tools-title">使った道具</h2>
-      <ul class="tool-list">
-        <li>Claude Code：構成・文章・ページづくり</li>
-        <li>Codex CLI：デザイン・イラスト</li>
-        <li>Gemini：声の読み上げ</li>
-        <li>GitHub Pages：公開（無料）</li>
-      </ul>
-    </div>
-  </section>
-  <section class="contact" aria-labelledby="contact-title">
-    <div class="wrap">
-      <h2 id="contact-title">自分の1to1シートもつくってみたい方へ</h2>
-      <p>石島にひと声ください！</p>
-      <a class="btn" href="https://www.facebook.com/ryota.challenger">Facebookでメッセージを送る</a>
-    </div>
-  </section>
+<section class="hero" aria-labelledby="page-title"><div class="wrap">
+  <div class="hero-heading"><h1 id="page-title">BNIで毎週使える、AIの指示文集</h1><img src="img/icons/how-delivery-checklist.png" alt="" width="112" height="112"></div>
+  <p class="lead"><strong>コピーして、【　】を埋めて、AIに貼るだけ。</strong><br>ChatGPT・Gemini・Claude、どのAIでも使えます。<br>石島が毎週の活動で実際に使っている型を、そのまま入れました。</p>
+  <h2 class="steps-title">使い方（3ステップ）</h2>
+  <ol class="steps">
+    <li>使いたい場面の「コピーする」を押す</li>
+    <li>ChatGPTなどに貼り付ける</li>
+    <li>【　】の中を自分の内容に書き換えて、送信する</li>
+  </ol>
+</div></section>
+<div class="wrap">
+<nav class="toc" id="contents" aria-labelledby="contents-title">
+  <h2 id="contents-title">7つの場面から選ぶ</h2>
+  <ul class="chips">
+    <li><a href="#prompt-1"><span class="chip-number">01</span><span>ウィークリープレゼンの原稿</span></a></li>
+    <li><a href="#prompt-2"><span class="chip-number">02</span><span>1to1の事前準備</span></a></li>
+    <li><a href="#prompt-3"><span class="chip-number">03</span><span>1to1のお礼メッセージ</span></a></li>
+    <li><a href="#prompt-4"><span class="chip-number">04</span><span>お繋ぎ文（打診文とグループの紹介文）</span></a></li>
+    <li><a href="#prompt-5"><span class="chip-number">05</span><span>自分の金の卵と、聞き逃してはならない言葉</span></a></li>
+    <li><a href="#prompt-6"><span class="chip-number">06</span><span>推薦の言葉</span></a></li>
+    <li><a href="#prompt-7"><span class="chip-number">07</span><span>自分の1to1シートをつくる</span></a></li>
+  </ul>
+</nav>
+<div class="prompts">
+<article class="prompt-card" id="prompt-1" aria-labelledby="title-1">
+  <div class="card-head">
+    <span class="card-number" aria-label="1">01</span>
+    <div class="card-title"><h2 id="title-1">ウィークリープレゼンの原稿</h2><span class="frequency">頻度：毎週</span></div>
+    <img src="img/icons/how-delivery-checklist.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>定例会の前に、40秒のプレゼン原稿を作るとき</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-1" aria-describedby="title-1">コピーする</button></div>
+    <pre class="prompt-text" id="text-1">あなたはBNIのウィークリープレゼン（1人40秒）の原稿づくりを手伝うアシスタントです。
+下の情報から、声に出して40秒（約230字）で読める原稿を3案つくってください。
+
+<span class="placeholder">【私の名前】</span>
+<span class="placeholder">【業種（カテゴリー）】</span>
+<span class="placeholder">【今週探している人】</span>例：奥さんが経理をしている飲食店の社長
+<span class="placeholder">【その人が困っている場面】</span>例：手書きの出納帳、袋に入ったままのレシート
+<span class="placeholder">【私の実績や数字（1つ）】</span>
+<span class="placeholder">【その人がふと口にする言葉】</span>例：「うちの経理は嫁さんがやってくれてるんだよね」
+
+原稿の型
+1. 名前と業種（1文）
+2. 探している人を、具体的に1種類だけ（「誰でも」にしない）
+3. その人が困っている場面を、目に浮かぶように1〜2文
+4. 私の実績か数字を1つ
+5. 合図の一言：「この一言を聞いたら、私を思い出してください」
+6. 名前と業種で締める
+
+書き方のルール
+・1文は短く、話し言葉で
+・サービスの説明を並べない（話題は1つに絞る）
+・「——」や〈〉は使わない
+・最後に、3案それぞれの「合図の一言」だけを一覧にする</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+<article class="prompt-card" id="prompt-2" aria-labelledby="title-2">
+  <div class="card-head">
+    <span class="card-number" aria-label="2">02</span>
+    <div class="card-title"><h2 id="title-2">1to1の事前準備</h2><span class="frequency">頻度：毎週</span></div>
+    <img src="img/icons/listening.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>1to1の前日に、聞くことと紹介できそうな人を整理するとき</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-2" aria-describedby="title-2">コピーする</button></div>
+    <pre class="prompt-text" id="text-2">あなたはBNIの1to1（1対1の面談）の準備を手伝うアシスタントです。
+目的は、お互いのビジネスを深く理解して、紹介し合える関係をつくることです。売り込みはしません。
+
+<span class="placeholder">【相手の名前と業種】</span>
+<span class="placeholder">【相手について分かっていること】</span>例：ウィークリープレゼンで話していたこと、相手の1to1シートの内容
+<span class="placeholder">【私の業種と、探している人】</span>
+
+次の4つを出してください。
+1. 相手のGAINS（目標・実績・興味・人脈・スキル）を引き出す質問を、各1〜2問
+2. 「相手が一番紹介してほしい人」と「聞き逃してはならない言葉」を具体的にする質問を3問
+3. 私の人脈から、相手に紹介できそうな業種や人の候補（理由つき）
+4. 相手から私を紹介してもらえそうな場面の候補（理由つき）
+
+質問は、相手が話を広げやすい聞き方にしてください。</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+<article class="prompt-card" id="prompt-3" aria-labelledby="title-3">
+  <div class="card-head">
+    <span class="card-number" aria-label="3">03</span>
+    <div class="card-title"><h2 id="title-3">1to1のお礼メッセージ</h2><span class="frequency">頻度：毎週</span></div>
+    <img src="img/icons/message.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>1to1が終わったあと、Messengerなどでお礼を送るとき</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-3" aria-describedby="title-3">コピーする</button></div>
+    <pre class="prompt-text" id="text-3">1to1のお礼メッセージ（Messengerなどで送る短い文）を書いてください。
+
+<span class="placeholder">【相手の名前】</span>
+<span class="placeholder">【1to1で話したこと】</span>メモをそのまま貼ってOK
+<span class="placeholder">【印象に残った相手の言葉や話】</span>
+<span class="placeholder">【私が約束したこと／相手が約束してくれたこと】</span>
+
+ルール
+・最初の一行は「本日はありがとうございました」のような事実から入る
+・印象に残った話を1つだけ、具体的に入れる（話の内容を要約して並べない）
+・約束したことがあれば、次の一歩として1行で書く
+・全体で6行以内。1つのかたまりは2〜3行まで
+・「単なる〜ではなく」「〜だからではありません」という言い回しと「——」は使わない
+・整いすぎないよう、話し言葉に近づける
+・私が自分の言葉を1文足す場所を、★の印で1か所だけ空けておく</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+<article class="prompt-card" id="prompt-4" aria-labelledby="title-4">
+  <div class="card-head">
+    <span class="card-number" aria-label="4">04</span>
+    <div class="card-title"><h2 id="title-4">お繋ぎ文（打診文とグループの紹介文）</h2><span class="frequency">頻度：紹介のたびに</span></div>
+    <img src="img/icons/gains-networks.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>2人をつなぎたいとき。まず片方に打診し、OKが出たら3人のグループで紹介する</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-4" aria-describedby="title-4">コピーする</button></div>
+    <pre class="prompt-text" id="text-4">2人をつなぐための文章を2つ書いてください。
+
+<span class="placeholder">【紹介したい相手A】</span>名前・所属（リージョン／チャプター）・仕事・実績を1つ
+<span class="placeholder">【紹介したい相手B】</span>名前・所属（リージョン／チャプター）・仕事・実績を1つ
+<span class="placeholder">【2人をつなぎたい理由】</span>お客様のどんな困りごとが解決できるか
+<span class="placeholder">【Bさんは、BNIのメンバーですか？】</span>はい／いいえ
+
+1. 打診文（Aさんだけに送る）
+・書き出し：「Aさんに、ご紹介させていただきたい方がいるのですが、下記のような方です。いかがでしょうか？」
+・「■どんな方か」「■どんなお仕事か」「■Aさんのお仕事との接点」の3つに分ける
+・結びの前に「不要でしたら、遠慮なくご放念ください。」
+・結び：「ご興味ありそうでしたら、おつなぎいたします。」
+
+2. グループの紹介文（3人のグループに送る）
+・Aさん宛てに、Bさんの所属・名前・仕事・実績を1つ
+・Bさん宛てに、Aさんの所属・名前・仕事・実績を1つ
+・結び：2人が組むと、お客様のどんな困りごとが解決できるかを1〜2文。最後は「ぜひ一度お話してみてください」
+
+ルール
+・Bさんが「いいえ」のときは、Bさん宛ての文に、BNI・リージョン・チャプター・カテゴリーを書かない。Aさんのことも「私の知り合いの◯◯さん」と書く
+・「同じ地元ですし」のような表面的な共通点を、紹介の理由にしない
+・絵文字は2個まで。「——」は使わない</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+<article class="prompt-card" id="prompt-5" aria-labelledby="title-5">
+  <div class="card-head">
+    <span class="card-number" aria-label="5">05</span>
+    <div class="card-title"><h2 id="title-5">自分の金の卵と、聞き逃してはならない言葉</h2><span class="frequency">頻度：月1回の見直し</span></div>
+    <img src="img/icons/golden-goose.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>「誰を紹介してほしいか」を絞り直すとき</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-5" aria-describedby="title-5">コピーする</button></div>
+    <pre class="prompt-text" id="text-5">BNIで紹介をもらうための「依頼の仕方」を一緒に考えてください。
+
+<span class="placeholder">【私の業種】</span>
+<span class="placeholder">【今までで一番良かったお客様3社の特徴】</span>業種・規模・決める人・困っていたこと
+<span class="placeholder">【受けたくない仕事】</span>
+
+次の5つを出してください。
+1. 金の卵（一番ほしい紹介先）：業種・規模・決める人・困っている状況まで入れた1文を3案。「誰でも」「経営者なら誰でも」にしない
+2. 聞き逃してはならない言葉：その人が日常会話でふと口にしそうな言葉を8つ（「」でくくる）
+3. 本気かどうかの見分け方：紹介してよいサインと、まだ早いサインを3つずつ
+4. 望ましくない紹介：先に伝えておいたほうがよいものを3つ
+5. 金のガチョウ：金の卵と日常的に会っている業種を3つ（理由つき）</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+<article class="prompt-card" id="prompt-6" aria-labelledby="title-6">
+  <div class="card-head">
+    <span class="card-number" aria-label="6">06</span>
+    <div class="card-title"><h2 id="title-6">推薦の言葉</h2><span class="frequency">頻度：お願いしたとき・されたとき</span></div>
+    <img src="img/icons/referral-trophy.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>仕事をお願いした相手に、推薦の言葉を書くとき</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-6" aria-describedby="title-6">コピーする</button></div>
+    <pre class="prompt-text" id="text-6">仕事をお願いした相手への「推薦の言葉」を書いてください。
+
+<span class="placeholder">【推薦する相手の名前と業種】</span>
+<span class="placeholder">【お願いした内容】</span>
+<span class="placeholder">【良かったところ】</span>箇条書きでOK
+<span class="placeholder">【その結果どうなったか】</span>
+
+ルール
+・最初の一行は事実から入る（例：「◯◯をお願いしました。」）
+・良かったところを3つに絞る
+・サービス内容の説明を並べず、仕事ぶりや向き合い方が伝わるように書く
+・200字以内。「——」は使わない
+・私が自分の言葉を1文足す場所を、★の印で1か所だけ空けておく</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+<article class="prompt-card" id="prompt-7" aria-labelledby="title-7">
+  <div class="card-head">
+    <span class="card-number" aria-label="7">07</span>
+    <div class="card-title"><h2 id="title-7">自分の1to1シートをつくる</h2><span class="frequency">頻度：最初に1回（その後は見直しのたびに）</span></div>
+    <img src="img/icons/sheet-profile.png" alt="" width="70" height="70" loading="lazy">
+  </div>
+  <p class="scene"><strong>使う場面：</strong>自分の1to1シート（自己紹介ページ）の文章をつくるとき</p>
+  <div class="prompt-box">
+    <div class="prompt-toolbar"><span class="prompt-label">指示文</span><button class="copy" type="button" data-copy="text-7" aria-describedby="title-7">コピーする</button></div>
+    <pre class="prompt-text" id="text-7">BNIの1to1で相手に渡す「1to1シート」の文章を、一緒につくってください。
+材料は、この下に貼ります（1to1やウィークリープレゼンの文字起こし、今の自己紹介、お客様の声など）。
+
+次の順番で組み立ててください。
+1. なぜこの仕事をしているのか（原点の場面から今まで。5行以内）
+2. 大切にしているやり方を3つ（それぞれ実例を1つ）
+3. 金の卵（一番ほしい紹介先）を具体的に
+4. 聞き逃してはならない言葉と、本気かどうかの見分け方
+5. 金のガチョウ
+6. 相手がコピーしてそのまま送れるお繋ぎ文
+7. GAINS（目標・実績・興味・人脈・スキル）
+
+ルール
+・材料に書いていないことは作らない。分からないところは「※要確認」と書く
+・1文は短く、話し言葉で
+
+<span class="placeholder">【材料】</span>
+（ここに貼る）</pre>
+  </div>
+  <div class="card-bottom"><a class="toc-back" href="#contents">目次に戻る</a></div>
+</article>
+</div>
+</div>
+<section class="making" aria-labelledby="making-title"><div class="wrap">
+  <div class="making-heading"><img src="img/icons/voice-designer.png" alt="" width="78" height="78" loading="lazy"><h2 id="making-title">このシートは、こうやってつくりました</h2></div>
+  <ol>
+    <li>1to1やウィークリープレゼンの文字起こしを集める</li>
+    <li>⑦の指示文で、文章のたたき台をつくる</li>
+    <li>語尾や言い回しを、自分の言葉に直す</li>
+    <li>デザインとイラストもAIで（「文字を太く」「画像を増やして」と感想を伝えるだけ）</li>
+    <li>使い方の動画も、画面のキャプチャーとAIの声でつくる</li>
+    <li>GitHub Pages で無料公開</li>
+  </ol>
+</div></section>
+<section class="contact" aria-label="お問い合わせ"><div class="wrap">
+  <p>自分の1to1シートもつくってみたい方は、石島にひと声ください！</p>
+  <a class="facebook" href="https://www.facebook.com/ryota.challenger">Facebookでメッセージを送る</a>
+</div></section>
 </main>
-<footer>
-  <div class="wrap"><a class="back" href="index.html">石島の1to1シートに戻る</a></div>
-</footer>
+<footer><div class="wrap"><a class="back" href="index.html">石島の1to1シートに戻る</a></div></footer>
+<div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<script>
+(() => {
+  const toast = document.querySelector('.toast');
+  let toastTimer;
+  function notify(message) {
+    clearTimeout(toastTimer);
+    toast.textContent = message;
+    toast.classList.add('show');
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+      toast.textContent = '';
+    }, 2600);
+  }
+  function fallbackCopy(text) {
+    const active = document.activeElement;
+    const selection = window.getSelection();
+    const ranges = [];
+    if (selection) {
+      for (let i = 0; i < selection.rangeCount; i++) ranges.push(selection.getRangeAt(i).cloneRange());
+    }
+    const field = document.createElement('textarea');
+    field.value = text;
+    field.readOnly = true;
+    field.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;padding:0;border:0;opacity:0;font-size:16px;';
+    document.body.appendChild(field);
+    try {
+      field.focus({ preventScroll: true });
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+      if (!document.execCommand('copy')) throw new Error('Copy failed');
+    } finally {
+      field.remove();
+      if (active && active.isConnected) active.focus({ preventScroll: true });
+      if (selection) {
+        selection.removeAllRanges();
+        ranges.forEach(range => selection.addRange(range));
+      }
+    }
+  }
+  document.querySelectorAll('[data-copy]').forEach(button => {
+    let buttonTimer;
+    button.addEventListener('click', async () => {
+      const text = document.getElementById(button.dataset.copy).textContent;
+      button.disabled = true;
+      try {
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== 'function') throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(text);
+        } catch {
+          fallbackCopy(text);
+        }
+        clearTimeout(buttonTimer);
+        button.textContent = 'コピーしました';
+        button.classList.add('done');
+        notify('コピーしました');
+        buttonTimer = setTimeout(() => {
+          button.textContent = 'コピーする';
+          button.classList.remove('done');
+        }, 2600);
+      } catch {
+        notify('コピーできませんでした。指示文を選択してコピーしてください。');
+      } finally {
+        button.disabled = false;
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>

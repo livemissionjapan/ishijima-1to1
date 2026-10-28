@@ -11,21 +11,21 @@
 2. `git commit` → `git push origin main` で数十秒後に公開反映
 3. お繋ぎ文の正本は `aminde-consulting-dashboards/bni/data.php` と `.claude/skills/bni-matching/SKILL.md`。**そちらを先に直してからここへ**
 
-## PDF版の作り方（2026-09-22 更新）
+## PDF版の作り方（2026-10-28 更新）
 
-PDFの生成元は `bni/tools/build_1to1_doc.py`（HTMLを組み立てるスクリプト）。
-**Web版の `index.html` とは別物**なので、内容を変えたら両方に反映すること。
+PDFは **Web版の「1to1シート・GAINS」部分をそのまま書き出す**（旧 `bni/tools/build_1to1_doc.py` 方式は廃止。Web版と中身がずれ続けたため）。
 
 ```bash
-cd "<repo>/bni/tools" && python3 build_1to1_doc.py            # → 1to1sheet_designed.html
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
-  --no-pdf-header-footer --print-to-pdf="$PWD/sheet.pdf" --virtual-time-budget=20000 \
-  "file://$PWD/1to1sheet_designed.html"
-# sheet.pdf を pdf/ishijima_1to1_sheet.pdf に上書きして commit → push
+python3 -m http.server 8765   # このフォルダで起動
+python3 tools/make_pdf.py http://localhost:8765/index.html pdf/ishijima_1to1_sheet.pdf
 ```
 
-- **LibreOffice（`soffice --convert-to pdf`）は使わない。** 日本語の一部が豆腐（□）になるフォント埋め込み不具合が出る（2026-09-22 実測）。Chromeのヘッドレス印刷なら再現しない
-- 画像の元素材 `bni/tools/docexport/img_s/`（Googleドキュメントのzip展開・8MB超でgit対象外）は**現存しない**。スクリプトは `img/` の写真へ自動でフォールバックする（`FALLBACK` 辞書）。`image9.png`（表紙の画像）だけは元が特定できず `profile.jpg` を当てている ※要確認
+- Chrome（Playwright の channel='chrome'）で A4・4ページ前後に書き出す
+- index.html を直したら、必ずPDFも作り直してから commit・push する
+
+## 指示文集（howto.html）
+
+「BNIで毎週使える、AIの指示文集」。ウィークリープレゼン・1to1の準備・お礼文・お繋ぎ文・金の卵・推薦の言葉・1to1シートづくりの7本。各指示文にコピーボタン。1to1シート上部のバナーから開く。
 
 ## Googleドキュメント版
 

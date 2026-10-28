@@ -688,6 +688,15 @@ details.past-acc[open]>summary{margin-bottom:26px}
 }
 @media print{.making-banner{display:none}#s-gains .gains-row{break-inside:avoid}}
 .making-banner .mb-sub{display:block;font-weight:500;font-size:.82em;opacity:.85;margin-top:2px}
+.next-card{text-align:center;background:#fff;border:2px solid var(--line,#d8e0ea);border-radius:16px;padding:34px 26px}
+.next-card .en{font-weight:800;letter-spacing:.18em;color:var(--blue,#1f5aa6);font-size:13px;text-transform:uppercase;margin:0 0 8px}
+.next-card h2{margin:0 0 12px}
+.next-card p{margin:0 0 20px}
+.second-head{padding:70px 0 10px;border-top:6px solid var(--gold,#c8963c);background:#fff}
+.second-head .en{font-weight:800;letter-spacing:.18em;color:var(--blue,#1f5aa6);font-size:13px;text-transform:uppercase;margin:0 0 8px}
+.second-head h2{margin:0 0 10px}
+.story2-body p{font-size:18px}
+.photos.photos2{grid-template-columns:repeat(2,1fr)}
 </style>
 </head>
 <body>
@@ -696,7 +705,7 @@ details.past-acc[open]>summary{margin-bottom:26px}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#"><img class="brand-logo" src="img/lmj-logo.png" width="421" height="93" alt="LMJ"><b>石島 亮太</b><small>飲食店専門の経理代行</small></a>
-    <nav class="nav" aria-label="ページ内ナビゲーション"><a href="#origin">Why</a><a href="#how">How</a><a href="#what">What</a><a href="#help">ご紹介いただきたい方</a><a href="#referral">お繋ぎ文</a><a href="#voices">お客様の声</a><a href="#sheets">1to1・GAINS</a></nav>
+    <nav class="nav" aria-label="ページ内ナビゲーション"><a href="#origin">Why</a><a href="#how">How</a><a href="#help">ご紹介いただきたい方</a><a href="#goose">金のガチョウ</a><a href="#referral">お繋ぎ文</a><a href="#sheets">1to1・GAINS</a><a href="#second">2回目の1to1</a></nav>
     <a class="top-cta" href="#referral">お繋ぎ文をコピー</a>
   </div>
 </header>
@@ -735,7 +744,7 @@ details.past-acc[open]>summary{margin-bottom:26px}
 <div class="stats">
   <div class="wrap">
     <div class="stat rv"><b><span class="cnt" data-n="10">0</span><small>年</small></b><span class="lbl">経理代行歴<br>2016年開業</span></div>
-    <div class="stat rv d1"><b><span class="cnt" data-n="24">0</span><small>社</small></b><span class="lbl">顧問先<br>社員3名・パート2名・外注2名</span></div>
+    <div class="stat rv d1"><b><span class="cnt" data-n="26">0</span><small>社</small></b><span class="lbl">顧問先<br>社員3名・パート2名・外注2名</span></div>
     <div class="stat rv d2"><b>7<small>→</small>13<small>店舗</small></b><span class="lbl">店舗が増える間<br>本社の経理担当はゼロ人のまま</span></div>
     <div class="stat rv d3"><b><span class="cnt" data-n="200">0</span><small>名</small></b><span class="lbl">ラーメンチェーン直営20店舗＋FC20<br>経理代行＋資金繰り・財務</span></div>
   </div>
@@ -746,12 +755,11 @@ details.past-acc[open]>summary{margin-bottom:26px}
   <div class="narrow">
     <div class="sec-head rv"><img class="section-icon" src="img/icons/restaurant.png" width="384" height="384" loading="lazy" alt="青い葉をあしらった、実家の寿司屋をイメージした店"><p class="en">Why</p><h2>私が、この仕事をしている理由</h2></div>
     <div class="rv">
-    <p>実家は寿司屋でした。父が握り、母が経理。毎年3月になると、母がレシートの山と格闘していました。</p>
+    <p>実家は寿司屋でした。父が握り、母が経理。毎年1月・2月になると、母がレシートの山と格闘していました。</p>
     <p>数字が苦手な母を助けたくて、高校は商業科へ。高校2年生のとき、先生や商工会議所に聞きながら、実家の確定申告を自分で作って提出しました。</p>
     <p>あのとき母に渡したかったのは「安心」でした。</p>
     <div class="pull">経理の重荷を引き受けて、<br>社長とご家族に「安心」を渡す。<br><span class="pull-s">これが、私が仕事をする理由です。</span></div>
     <p>ガソリンスタンド、ラーメン店のエリアマネージャーを経て、31歳ではじめて経理の実務に触れました。転機は「経理担当が突然辞めた会社」に助っ人で入ったこと。現場の相談が全部集まるようになり、顧問税理士の先生に背中を押されて独立しました。</p>
-    <p>一度、会社を急に大きくしようとして人を傷つけたことがあります。お金の失敗は取り返せても、人の心は元に戻りません。だから社員さんにも「この会社で働けてよかった」と思ってもらえる会社をつくると決めています。</p>
     </div>
     <div class="photos photos3">
       <figure class="rv"><img loading="lazy" src="img/lunch.jpg" alt="合同会社LMJのランチ会"><figcaption>合同会社LMJ（経理代行）のランチ会</figcaption></figure>
@@ -761,14 +769,15 @@ details.past-acc[open]>summary{margin-bottom:26px}
   </div>
 </section>
 
+
 <!-- HOW -->
 <section id="how">
   <div class="wrap">
     <div class="sec-head rv"><p class="en">How</p><h2>大切にしている<wbr><span class="nowrap">3つのやり方</span></h2><p>「安心」を渡すために、この3つを毎回守っています。</p></div>
     <div class="grid3">
-      <div class="card how rv"><span class="how-n">1<img class="how-icon" src="img/icons/how-store-numbers.png" width="384" height="384" loading="lazy" alt="店とグラフ、電卓"></span><h3>店の目線で、数字を見る</h3><ul class="clean"><li><b>ラーメン店4店舗・年商1.6億円</b>をエリアマネージャーとして数字で回していました</li><li>理論原価と実原価のズレを現場で潰し、人時売上からシフトを組む側にいた人間です</li></ul></div>
-      <div class="card how rv d1"><span class="how-n">2<img class="how-icon" src="img/icons/how-delivery-checklist.png" width="384" height="384" loading="lazy" alt="デリバリーバイクと伝票のチェックリスト"></span><h3>飲食店の段取りが、最初から分かる</h3><ul class="clean"><li>デリバリーの着金、店舗別の部門管理、インフォマートは<b>最初から分かっているので、社長への聞き取りが発生しません</b></li><li>「他の会社さんではこうしていますよ」と、<b>飲食4社・15店舗の運用から提案</b>します</li></ul></div>
-      <div class="card how rv d2"><span class="how-n">3<img class="how-icon" src="img/icons/how-cash-inventory.png" width="384" height="384" loading="lazy" alt="現金袋と棚卸のクリップボード"></span><h3>届く資料そのものを変える</h3><ul class="clean"><li><b>現金を店に残さない運用</b>を先に作ります。夜間金庫で当日入金、小口はカードに</li><li><b>棚卸を習慣にします</b>。毎月入れてもらい、定着するまでリマインド</li></ul></div>
+      <div class="card how rv"><span class="how-n">1<img class="how-icon" src="img/icons/how-store-numbers.png" width="384" height="384" loading="lazy" alt="店とグラフ、電卓"></span><h3>お店の目線で、数字を見られる</h3><ul class="clean"><li>経理の前は、ラーメン屋さんのエリアマネージャーとして、<b>4店舗・年商1.6億円</b>を回していました</li><li>決めた原価と実際の原価のズレを現場でつぶす。人時売上を見ながら、シフトを組む。<b>数字を、お店で使う側</b>だったんです</li></ul></div>
+      <div class="card how rv d1"><span class="how-n">2<img class="how-icon" src="img/icons/how-delivery-checklist.png" width="384" height="384" loading="lazy" alt="デリバリーバイクと伝票のチェックリスト"></span><h3>飲食店の段取りが、最初から分かる</h3><ul class="clean"><li>デリバリーの売上の入金、お店ごとの数字の分け方、インフォマート。<b>最初から分かっているので、社長に一から聞き取りをする必要がありません</b></li><li>ほかの飲食の会社さんの運用も見ているので、「ほかの会社さんでは、こうしていますよ」というご提案もできます</li></ul></div>
+      <div class="card how rv d2"><span class="how-n">3<img class="how-icon" src="img/icons/how-cash-inventory.png" width="384" height="384" loading="lazy" alt="現金袋と棚卸のクリップボード"></span><h3>届く資料そのものを変えていく</h3><ul class="clean"><li>売上の現金は<b>夜間金庫で当日に入金</b>。小口の支払いは、カードに</li><li>棚卸しは<b>毎月の習慣</b>にして、定着するまで、弊社からお声がけします</li></ul></div>
     </div>
   </div>
 </section>
@@ -778,8 +787,9 @@ details.past-acc[open]>summary{margin-bottom:26px}
   <div class="wrap">
     <div class="sec-head rv"><img class="section-icon" src="img/icons/accounting-ai.png" width="384" height="384" loading="lazy" alt="帳簿と資金繰りを表す青い線画"><p class="en">What</p><h2>お引き受けしていること</h2><p>飲食店専門の経理代行です。決算をお願いしている税理士の先生は、そのままで大丈夫です。<br><b>建設・建築業の経理はお引き受けしていません。</b></p></div>
     <div class="grid2">
-      <div class="card rv"><h3>日々の経理を、丸ごと</h3><ul class="clean"><li>記帳・請求書の受け取りと発行・紙の書類のデータ化</li><li>必要に応じて<b>総務</b>まで</li><li>やり取りはオンラインで完結。全国対応です</li></ul></div>
-      <div class="card rv d1"><h3>必ず一緒にお渡しするもの</h3><ul class="clean"><li><b>資金繰り表</b>：半年先の現預金がいくら残るか</li><li><b>現金残高のズレ</b>：店ごとの過不足を毎月</li><li><b>店舗別のFL</b>：本部費は按分せず、全店で賄う見せ方に</li></ul></div>
+      <div class="card rv"><h3>日々の経理を、丸ごと</h3><ul class="clean"><li>記帳・請求書の受け取りと発行・紙の書類のデータ化</li><li>必要に応じて<b>総務</b>まで</li><li>やり取りはオンラインで完結。全国対応です</li><li><b>料金の目安：1店舗 月3.3万円から</b>（年商4,000万円まで）</li><li>エステ・講座ビジネス・物販など、<b>飲食店以外のサービス業</b>もお受けしています</li></ul>
+        <h3 style="margin-top:22px">新しいお店を出すときの事務も</h3><ul class="clean"><li>オープンの<b>5ヶ月ほど前から</b>、弊社のスタッフが動きます</li><li>賃貸借契約、電気・ガス・水道・ネット回線、保健所の手続き、銀行口座、レジ、インフォマート、食材屋さんとの契約、求人の原稿まで</li><li>だから、<b>お店が増えても本社の事務の人を増やさずに</b>回せます</li></ul></div>
+      <div class="card rv d1"><h3>必ず一緒にお渡しするもの</h3><ul class="clean"><li><b>Google口コミが増えやすくなるAIツール「<a href="https://meeo.jp/" target="_blank" rel="noopener">meeo（ミーオ）</a>」</b>：月3.3万円のプランに付けています。来店されたお客様がQRコードからかんたんなアンケートに答えると、その回答をもとに、AIが口コミ文章の作成をお手伝いします。経理だけでなく<b>売上を上げる施策</b>もセットでお渡しします</li><li><b>資金繰り表</b>：半年先の現預金がいくら残るか</li><li><b>現金残高のズレ</b>：店ごとの過不足を毎月</li><li><b>店舗別のFL</b>：本部費は按分せず、全店で賄う見せ方に</li></ul></div>
     </div>
   </div>
 </section>
@@ -790,11 +800,10 @@ details.past-acc[open]>summary{margin-bottom:26px}
     <div class="sec-head rv"><p class="en">Who I Help</p><h2>ご紹介いただきたい方<span class="sub">一番ほしい紹介先</span></h2></div>
     <div class="egg rv">
       <p class="egg-no">金の卵 ①</p><img class="egg-icon" src="img/icons/restaurant.png" width="384" height="384" loading="lazy" alt="飲食店のオーナーを表す店のイラスト">
-      <p class="big">飲食店のオーナー社長</p>
-      <p class="big">経理を「奥様」か「担当者1名」に任せている会社</p>
-      <p class="egg-why">とくに、<b>「家族に数字を背負わせていて申し訳ない」</b>と感じている社長。同じことを大切にしている方なので、話が早く進みます。</p>
+      <p class="big">2店舗目を考えている、飲食店のオーナー社長</p>
+      <p class="big">経理を奥様かご自身が、閉店後にやっている会社</p>
       <ul class="clean">
-        <li><b>1店舗から対象</b>です。規模は問いません</li>
+        <li><b>1店舗からOK</b>です。規模は問いません</li>
         <li><b>「2店舗目、考えたことある？」</b>に少しでも反応がある社長は、特に。数字を見れば、出せるかどうかが分かります</li>
         <li>ただし<b>社長が現場に出ている会社</b>に限ります（社長がデスクで数字を見ている会社は、私の出番がありません）</li>
         <li>決算をお願いしている<b>税理士の先生は、そのまま</b>で大丈夫です。先生の手前の、日々の実務を引き受けます</li>
@@ -804,11 +813,12 @@ details.past-acc[open]>summary{margin-bottom:26px}
     <div class="egg egg2 rv">
       <p class="egg-no">金の卵 ②</p><img class="egg-icon" src="img/icons/accounting-ai.png" width="384" height="384" loading="lazy" alt="帳簿とつながりで表す経理のAI化">
       <p class="big">税理士の先生</p>
-      <p class="big">AI・DXを進めたいけれど、手が回っていない事務所</p>
+      <p class="big">記帳を手放したい、AIを入れたいけれど手が回らない事務所</p>
       <ul class="clean">
-        <li><b>40代〜50代の先生</b>で、<b>人は増やしたくないが業務効率は上げたい</b>事務所</li>
-        <li>マネーフォワードやfreeeとAIエージェントをつないで、<b>記帳の作業そのものを自動化する仕組み</b>をご一緒します</li>
-        <li>事務所の中の作業を一緒に減らす、<b>協業のご提案</b>です</li>
+        <li><b>記帳の受け皿</b>として、先生の手前の記帳を引き受けます。先生は申告に専念できます</li>
+        <li><b>事務所へのAI導入</b>をお手伝いします。弊社は記帳の<b>7割ほどをAIで</b>終わらせていて、そのやり方をそのままお伝えします</li>
+        <li>ツールを渡すのではなく、考え方からお伝えする研修型です。<b>3ヶ月の伴走</b>のあと、ご希望があれば継続でご一緒します</li>
+        <li>導入したあとは、先生が他の事務所にお伝えできる<b>協業パートナー</b>の形もあります</li>
       </ul>
     </div>
   </div>
@@ -966,75 +976,6 @@ https://livemissionjapan.github.io/ishijima-1to1/
   </div>
 </section>
 
-<!-- PHRASES -->
-<section id="phrases" class="tint">
-  <div class="wrap">
-    <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/listening.png" width="384" height="384" loading="lazy" alt="大切な言葉を聞く耳と吹き出し"><p class="en">Listen For</p><h2>聞き逃してはならない<wbr><span class="nowrap">フレーズ</span></h2><p>このどれかが聞こえたら、私の出番です。</p></div>
-  </div>
-  <div class="flow" data-speed="0.45"><div class="flow-track">
-      <div class="card fcard"><h3>社長本人の口から出る言葉</h3><ul class="clean quote"><li>「奥さんが経理をやっている」</li><li>「経理の人が辞めてしまって」</li><li>「経理はパートさん一人に任せてる」</li><li>「店舗を増やしたいけど、事務が回らない」</li><li>「試算表が3ヶ月遅れている」</li></ul></div>
-      <div class="card fcard"><h3>社長がふと漏らす、その手前の言葉</h3><ul class="clean quote"><li>「奥さんに余裕を作ってあげたいな」</li><li>「あの人にしか分からない仕事があるな」</li><li>「もう1店舗出したい」</li></ul></div>
-      <div class="card fcard"><h3>見ていて気づくこと</h3><ul class="clean"><li>社長が領収書を袋で持ってくる</li><li>社長が現場に入りっぱなしで、経営を考える時間がない</li><li>請求書をいまだに手で作っている</li></ul></div>
-      <div class="card fcard"><h3>記帳を手放したい税理士の先生</h3><ul class="clean quote"><li>「記帳までは手が回らない」</li><li>「キャパオーバーで受けられない」</li></ul></div>
-      <div class="card fcard"><h3>AI・DXを進めたい税理士の先生</h3><ul class="clean quote"><li>「人を増やさずに件数を増やしたい」</li><li>「AIを使いたいが、何から手をつければいいか」</li><li>「入力作業に人を取られている」</li></ul></div>
-  </div></div>
-  <div class="wrap">
-  </div>
-</section>
-
-<!-- SERIOUS -->
-<section id="serious">
-  <div class="wrap">
-    <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/magnifier.png" width="384" height="384" loading="lazy" alt="本気のサインを確かめる虫眼鏡と書類"><p class="en">How To Tell</p><h2>本気かどうかの見分け方</h2><p>「聞き逃してはならないフレーズ」が出たら、一歩だけ踏み込んでみてください。</p></div>
-    <div class="q rv">「それ、いま一番困っているのは何ですか？」</div>
-  </div>
-  <div class="flow" data-speed="0.4"><div class="flow-track">
-      <div class="card fcard sign-yes"><h3> 本気のサイン</h3><p><b>痛みを具体的に話し始める</b></p><p class="note">「担当が今月末で辞める」「試算表が遅れて銀行に出せない」など、期限や固有名詞が出てくる</p></div>
-      <div class="card fcard sign-yes"><h3> 本気のサイン</h3><p><b>「いくらで、どこまでやってくれるの？」</b></p><p class="note">価格や範囲を聞いてくる</p></div>
-      <div class="card fcard sign-yes"><h3> 本気のサイン</h3><p><b>社長本人が「自分の時間を経営に使いたい」</b></p><p class="note">この状態なら、ぜひ私に繋いでください</p></div>
-      <div class="card fcard sign-no"><h3> まだ情報収集の段階</h3><p><b>「便利そうだね」「今度話聞かせて」で終わる</b></p><p class="note">日程の話にならないときは、そのまま置いておいてください</p></div>
-      <div class="card fcard sign-no"><h3> まだ情報収集の段階</h3><p><b>話しているのが奥様やご担当者だけ</b></p><p class="note">経理の人が辞めた瞬間に、また思い出していただければ十分です</p></div>
-  </div></div>
-  <div class="wrap">
-  </div>
-</section>
-
-<!-- PAST GOLDEN REFERRALS -->
-<section id="past">
-  <div class="narrow">
-    <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/referral-trophy.png" width="384" height="384" loading="lazy" alt="握手をあしらったゴールデンリファーラルのトロフィー"><p class="en">Thank You</p><h2>これまでの<wbr><span class="nowrap">ゴールデンリファーラル</span></h2><p>ご紹介くださった皆さま、本当にありがとうございます。</p></div>
-    <details class="past-acc rv"><summary><span>紹介の流れと、お役に立てたことを見る（3件）</span></summary>
-    <div class="past rv">
-      <div class="past-i"><p class="past-who">公認会計士の先生</p>
-        <dl><dt>紹介の流れ</dt><dd>ディレクターからご紹介いただき、1to1で先生の事務所の状況を伺いました</dd>
-        <dt>お役に立てたこと</dt><dd>先生の手が回らない記帳を、業務委託で引き受けています</dd></dl></div>
-      <div class="past-i"><p class="past-who">税理士の先生</p>
-        <dl><dt>紹介の流れ</dt><dd>AI導入支援をしているメンバーからのご紹介です。「税理士業務のAI化は、経理の専門家と組んだほうがいい」と判断していただき、私に声がかかりました</dd>
-        <dt>お役に立てたこと</dt><dd>先生の事務所にAIを導入しました！ いまは先生と組んで、AIで税理士業務を楽にする仕組みを一緒に広げています</dd></dl></div>
-      <div class="past-i"><p class="past-who">メンバーのご家族が働く会社</p>
-        <dl><dt>紹介の流れ</dt><dd>採用支援をしているメンバーのご家族の会社で、「AIを活用したい」という話が出ていました。それを私につないでくださいました</dd>
-        <dt>お役に立てたこと</dt><dd>社内でのAI活用をお手伝いすることになり、ご契約をいただきました</dd></dl></div>
-    </div>
-    </details>
-  </div>
-</section>
-
-<!-- VOICES -->
-<section id="voices" class="tint">
-  <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/message.png" width="384" height="384" loading="lazy" alt="お客様から届いた声を表す封筒"><p class="en">Voices</p><h2>お客様の声</h2><p>どんな方の、どんな困りごとが、どう解決したのか。合同会社LMJの公式サイトに掲載しているお客様の声から整理しました。</p></div>
-  <div class="flow" data-speed="0.5"><div class="flow-track">
-      <div class="vcard"><img class="voice-icon" src="img/icons/restaurant.png" width="384" height="384" loading="lazy" draggable="false" alt="飲食店"><p class="who">年商5億円規模の飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>バックオフィスの人を採用しても、教育に手間がかかり、辞められる心配がいつもあった</dd><dt class="fix">どう解決したか</dt><dd>経理だけでなくバックオフィス業務をまるごとLMJへ。教育も離職の心配もいらなくなり「LMJさんがいなかったら、今のうちの会社は成り立っていません」とのお声をいただいています</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-restaurant-stores.png" width="384" height="384" loading="lazy" draggable="false" alt="複数店舗を展開する飲食店"><p class="who">16店舗を展開する飲食店の社長</p><dl><dt class="pain">困りごと</dt><dd>社内に経理スタッフはいるが、まだ経験が浅い</dd><dt class="fix">どう解決したか</dt><dd>経理のサポートと一緒に、スタッフさんの教育もLMJが担当。細かいところまで手が届く対応で、社内の経理が回るようになりました</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-spa.png" width="384" height="384" loading="lazy" draggable="false" alt="タオルと植物のエステサロン"><p class="who">エステサロンの社長</p><dl><dt class="pain">困りごと</dt><dd>奥様が経理を担当していて、夫婦ともに時間の余裕がなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに切り出しました。時間に余裕ができて家族で出かける機会が増え、本業の売上も伸びました</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-office-team.png" width="384" height="384" loading="lazy" draggable="false" alt="オフィスと従業員"><p class="who">従業員を抱える会社の社長</p><dl><dt class="pain">困りごと</dt><dd>経理担当を自社で採用・教育するには、コストもリスクも大きい</dd><dt class="fix">どう解決したか</dt><dd>財務の状況をスピードを上げて見える化し、不要なコストを削減。その数字を現場に共有したことで、従業員が自分で考えて動く組織に育っています</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-resale.png" width="384" height="384" loading="lazy" draggable="false" alt="段ボールと循環の矢印"><p class="who">リセール事業の社長</p><dl><dt class="pain">困りごと</dt><dd>税理士さんに全部を丸投げしていて、毎月のコストが高かった</dd><dt class="fix">どう解決したか</dt><dd>記帳代行だけをLMJに移しました。税理士さんはそのままで、月1万5,000円のコスト削減</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-online-salon.png" width="384" height="384" loading="lazy" draggable="false" alt="ノートPCと吹き出し"><p class="who">オンラインサロンの運営者</p><dl><dt class="pain">困りごと</dt><dd>経理まわりのストレスで、新しいことに手が回らなかった</dd><dt class="fix">どう解決したか</dt><dd>経理をLMJに任せてストレスが激減。新規事業を3つ立ち上げ、1年で会社の規模が2億円を超えました</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-designer.png" width="384" height="384" loading="lazy" draggable="false" alt="ペンとカラーパレット"><p class="who">グラフィックデザイナー</p><dl><dt class="pain">困りごと</dt><dd>請求書の作成と送付、入金の確認が苦手で、制作に集中できない時があった</dd><dt class="fix">どう解決したか</dt><dd>その業務をLMJが引き受け、煩わしい作業から解放されて、好きな制作に集中できるようになりました</dd></dl></div>
-      <div class="vcard"><img class="voice-icon" src="img/icons/voice-camera.png" width="384" height="384" loading="lazy" draggable="false" alt="カメラ"><p class="who">フリーカメラマン</p><dl><dt class="pain">困りごと</dt><dd>管理や書類整理がどうしても苦手</dd><dt class="fix">どう解決したか</dt><dd>書類の送付日が近づくと、LMJから「まだですか」と声をかけています。経営が苦しい時期には、資金面の相談にも乗りました</dd></dl></div>
-    </div>
-  </div>
-</section>
-
 <!-- NOT / GIVE -->
 <section id="not">
   <div class="narrow">
@@ -1048,7 +989,6 @@ https://livemissionjapan.github.io/ishijima-1to1/
     </div>
   </div>
 </section>
-
 
 <!-- SHEETS -->
 <section id="sheets" class="dark">
@@ -1077,14 +1017,13 @@ https://livemissionjapan.github.io/ishijima-1to1/
       <h3>個人的な情報</h3>
       <table class="prof">
         <tr><th scope="row">家族</th><td>妻（ちえちゃん）・長男（けいご・11歳・小5）・長女（いちか・8歳・小3）の4人家族です。<br><br>ちえちゃんは、飲食店専門のデザイン会社のチーフデザイナーです。<br>担当先には、115店舗・130店舗規模のチェーンもあります。<br>私より仕事ができるという噂があり、頭が上がりません！</td></tr>
-        <tr><th scope="row">出身・居住</th><td>滋賀県高島市 出身<br>茨城県筑西市 在住（関東歴13年）</td></tr>
+        <tr><th scope="row">出身・居住</th><td>滋賀県高島市 出身<br>茨城県筑西市 在住（関東歴13年）<br><br>高島市は福井県の手前の雪国で、子どものころは雪が1m積もるのが当たり前でした。<br>実家の2階の窓から、雪にダイブしたこともあります！<br><br>今の筑西市は、雪がほとんど降りません。<br>今年のお正月に子どもたちを連れて帰ったら、大の字で雪にダイブして大喜び。<br>こういうところの出身でよかったなと思いました。</td></tr>
         <tr><th scope="row">人生の目標</th><td><b>「誰かの支えになり、『出会えてよかった』と思われる人になる。」</b></td></tr>
-        <tr><th scope="row">趣味</th><td>AI（子どもと一緒にゲームを作っています）<br>ゲーム（ドラクエ・龍が如く）<br>車（次はミニクーパーを狙っています）<br><br>AIは<b>子どもとのコミュニケーションの道具</b>でもあります</td></tr>
+        <tr><th scope="row">趣味</th><td><b>AI</b>：一番楽しい趣味です。子どもと一緒にゲームを作るなど、<b>子どもとのコミュニケーションの道具</b>にもなっています<br><br><b>ゲーム</b>：高校生のころは、新作の発売日になると3時間目から登校していました。今はドラゴンクエストのリメイク版を、けいごと一緒に遊んでいます。龍が如くも好きです<br><br><b>車</b>：イニシャルD世代で、スポーツカーが好きです。次はミニクーパーを狙っています</td></tr>
       </table>
-      <div class="photos">
-        <figure><img loading="lazy" src="img/karaage.jpg" alt="元祖唐揚げ本舗"><figcaption>元祖唐揚げ本舗</figcaption></figure>
-        <figure><img loading="lazy" src="img/harepan.jpg" alt="晴れぱん"><figcaption>晴れぱん</figcaption></figure>
+      <div class="photos photos2">
         <figure><img loading="lazy" src="img/family.jpg" alt="石島家の4人家族"><figcaption>ちえちゃん・けいご・いちかと4人家族</figcaption></figure>
+        <figure><img loading="lazy" src="img/mini-cooper.jpg" alt="ミニクーパー"><figcaption>次に狙っているミニクーパー</figcaption></figure>
       </div>
     </div>
 
@@ -1092,12 +1031,12 @@ https://livemissionjapan.github.io/ishijima-1to1/
       <h3>GAINSシート<img class="sheet-heading-icon" src="img/icons/sheet-goals.png" width="384" height="384" loading="lazy" alt="目標の旗"></h3>
       <table class="gains"><tbody>
       <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/sheet-goals.png" width="384" height="384" loading="lazy" alt="階段の先に立つ目標の旗"><div class="k"><span>Goals</span><small>目標</small></div></div></th><td><ul class="clean">
-        <li>BNI経由で年間売上 +1,000万円／継続契約10社（2028年4月末まで）<br><b>進捗20%（現在200万円）</b></li>
+        <li>BNI経由で年間売上 +1,000万円（2028年4月末まで）<br><b>進捗20%（現在200万円）</b></li>
         <li>社員の平均年収600万円！</li>
         <li>60歳で売上50億円！</li>
 </ul></td></tr>
       <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/referral-trophy.png" width="384" height="384" loading="lazy" alt="実績を表すトロフィー"><div class="k"><span>Accomplish<wbr>ments</span><small>実績</small></div></div></th><td><ul class="clean">
-        <li>事業歴11年目／顧客24社／社員3名・パート2名・外注2名の体制</li>
+        <li>事業歴11年目／顧客26社／社員3名・パート2名・外注2名の体制</li>
  <li><b>BNI：2026年5月に入会し、5ヶ月で100点メンバー</b>になりました</li>
         <li>飲食13店舗・スタッフ179名の会社 ― 経理担当の退職をきっかけに、<b>経理・総務をまるごと</b>巻き取り。<b>7店舗から13店舗に増える間、本社の経理担当はゼロ人のまま</b>。書類の開封からFAXの処理まで全て弊社で行っています</li>
         <li>ラーメンチェーン 直営20店舗・スタッフ200名＋FC国内外20店舗 ― 経理代行に加えて、<b>資金繰りと財務の相談</b>まで</li>
@@ -1110,13 +1049,69 @@ https://livemissionjapan.github.io/ishijima-1to1/
         <li>つくばライオンズクラブ ／ BNI Trustチャプター<br><a class="book-link" href="https://drive.google.com/drive/folders/117PgxelW7J7H0ZNAOU5A_2YL2JhWsIDm" target="_blank" rel="noopener">Trustのメンバーブックを開く <span aria-hidden="true">→</span></a></li></ul></td></tr>
       <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/gains-skills.png" width="384" height="384" loading="lazy" alt="実務のスキルを表す工具と鉛筆"><div class="k"><span>Skills</span><small>スキル</small></div></div></th><td><ul class="clean">
         <li>日商簿記1級</li>
-        <li>ITが苦手なパートさんも、AIで実務を回せるまで育てました。いまは全員がAIで仕事をしています！</li>
-        <li>自動車整備士3級</li></ul></td></tr>
+        <li>ITが苦手なパートさんも、AIで実務を回せるまで育てました。いまは全員がAIで仕事をしています！</li></ul></td></tr>
       <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/gains-wish.png" width="384" height="384" loading="lazy" alt="スタッフの幸せを願うハートと両手"><div class="k"><span>Wish</span><small>強い願望</small></div></div></th><td><p>社員さんやスタッフさんが<b>「この会社で働けてよかった」</b>と感じられる会社にすること。「自分の人生にこの会社が必要だ」と感じてもらえたら100点！</p></td></tr>
       <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/listening.png" width="384" height="384" loading="lazy" alt="耳と会話の吹き出し"><div class="k"><span>Secret</span><small>誰も知らない私</small></div></div></th><td><p>実は、<b>人の話を深く聞くのが苦手</b>です。<br>実家の寿司屋で、酔ったお客さんにニコニコうなずくだけで会話が成り立ってしまい、それに慣れてしまいました。<br>だからBNIは、<b>自分を育てる場</b>だと思って参加しています！</p></td></tr>
       <tr class="gains-row"><th scope="row"><div class="gains-label"><img class="gains-icon" src="img/icons/message.png" width="384" height="384" loading="lazy" alt="信頼をつなぐメッセージ"><div class="k"><span>Key</span><small>私の成功の鍵</small></div></div></th><td><p>まずは<b>人としての在り方</b>。お客様に喜ばれ、満足していただくことを積み重ねる。<b>最大の報酬は「次のお仕事の受注」</b>だと思っています。</p></td></tr>
       </tbody></table>
       <div class="pdf"><a class="btn btn-ghost" href="pdf/ishijima_1to1_sheet.pdf" target="_blank" rel="noopener"> PDFで開く（略歴・GAINS） <span class="ar">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- SECOND 1TO1 -->
+<section id="second" class="second-head">
+  <div class="narrow">
+    <p class="en">Second 1to1</p>
+    <h2>ここから先は、2回目の1to1で</h2>
+    <p>紹介の場面で使えるように、もう一歩深くお話しします。</p>
+  </div>
+</section>
+
+<!-- PHRASES -->
+<section id="phrases" class="tint">
+  <div class="wrap">
+    <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/listening.png" width="384" height="384" loading="lazy" alt="大切な言葉を聞く耳と吹き出し"><p class="en">Listen For</p><h2>聞き逃してはならない<wbr><span class="nowrap">フレーズ</span></h2><p>このどれかが聞こえたら、私の出番です。</p></div>
+  </div>
+  <div class="flow" data-speed="0.45"><div class="flow-track">
+      <div class="card fcard"><h3>社長本人の口から出る言葉</h3><ul class="clean quote"><li>「奥さんが経理をやっている」</li><li>「経理の人が辞めてしまって」</li><li>「経理はパートさん一人に任せてる」</li><li>「店舗を増やしたいけど、事務が回らない」</li><li>「試算表が3ヶ月遅れている」</li></ul></div>
+      <div class="card fcard"><h3>社長がふと漏らす、その手前の言葉</h3><ul class="clean quote"><li>「奥さんに余裕を作ってあげたいな」</li><li>「あの人にしか分からない仕事があるな」</li><li>「もう1店舗出したい」</li></ul></div>
+      <div class="card fcard"><h3>見ていて気づくこと</h3><ul class="clean"><li>社長が領収書を袋で持ってくる</li><li>社長が現場に入りっぱなしで、経営を考える時間がない</li><li>請求書をいまだに手で作っている</li></ul></div>
+      <div class="card fcard"><h3>記帳を手放したい税理士の先生</h3><ul class="clean quote"><li>「記帳までは手が回らない」</li><li>「キャパオーバーで受けられない」</li></ul></div>
+      <div class="card fcard"><h3>AI・DXを進めたい税理士の先生</h3><ul class="clean quote"><li>「人を増やさずに件数を増やしたい」</li><li>「AIを使いたいが、何から手をつければいいか」</li><li>「入力作業に人を取られている」</li></ul></div>
+  </div></div>
+  <div class="wrap">
+  </div>
+</section>
+
+
+<!-- SERIOUS -->
+<section id="serious">
+  <div class="wrap">
+    <div class="sec-head rv illustrated"><img class="section-icon" src="img/icons/magnifier.png" width="384" height="384" loading="lazy" alt="本気のサインを確かめる虫眼鏡と書類"><p class="en">How To Tell</p><h2>本気かどうかの見分け方</h2><p>「聞き逃してはならないフレーズ」が出たら、一歩だけ踏み込んでみてください。</p></div>
+    <div class="q rv">「それ、いま一番困っているのは何ですか？」</div>
+  </div>
+  <div class="flow" data-speed="0.4"><div class="flow-track">
+      <div class="card fcard sign-yes"><h3> 本気のサイン</h3><p><b>痛みを具体的に話し始める</b></p><p class="note">「担当が今月末で辞める」「試算表が遅れて銀行に出せない」など、期限や固有名詞が出てくる</p></div>
+      <div class="card fcard sign-yes"><h3> 本気のサイン</h3><p><b>「いくらで、どこまでやってくれるの？」</b></p><p class="note">価格や範囲を聞いてくる</p></div>
+      <div class="card fcard sign-yes"><h3> 本気のサイン</h3><p><b>社長本人が「自分の時間を経営に使いたい」</b></p><p class="note">この状態なら、ぜひ私に繋いでください</p></div>
+      <div class="card fcard sign-no"><h3> まだ情報収集の段階</h3><p><b>「便利そうだね」「今度話聞かせて」で終わる</b></p><p class="note">日程の話にならないときは、そのまま置いておいてください</p></div>
+      <div class="card fcard sign-no"><h3> まだ情報収集の段階</h3><p><b>話しているのが奥様やご担当者だけ</b></p><p class="note">経理の人が辞めた瞬間に、また思い出していただければ十分です</p></div>
+  </div></div>
+  <div class="wrap">
+  </div>
+</section>
+
+
+<!-- STORY 2 -->
+<section id="story2" class="tint">
+  <div class="narrow">
+    <div class="sec-head rv"><p class="en">My Story</p><h2>人を大切にすると決めた理由</h2></div>
+    <div class="rv story2-body">
+    <p>一度、会社を急に大きくしようとして人を傷つけたことがあります。お金の失敗は取り返せても、人の心は元に戻りません。だから社員さんにも「この会社で働けてよかった」と思ってもらえる会社をつくると決めています。</p>
     </div>
   </div>
 </section>
@@ -1170,7 +1165,7 @@ document.querySelectorAll('.sheet-tabs button').forEach(function(t){t.addEventLi
 })});
 // Keep the original message templates intact, including newlines.
 var msgs=document.querySelectorAll('pre.msg');msgs.forEach(function(m){m.dataset.tpl=m.textContent});
-document.getElementById('nm').addEventListener('input',function(e){var v=e.target.value.trim();msgs.forEach(function(m){m.textContent=v?m.dataset.tpl.split('○○').join(v):m.dataset.tpl})});
+var nmEl=document.getElementById('nm');if(nmEl)nmEl.addEventListener('input',function(e){var v=e.target.value.trim();msgs.forEach(function(m){m.textContent=v?m.dataset.tpl.split('○○').join(v):m.dataset.tpl})});
 function openFor(h){if(!h||h==='#')return;var id;try{id=decodeURIComponent(h.slice(1))}catch(e){return}var el=document.getElementById(id);if(!el)return;var d=el.matches('details')?el:el.querySelector('details.acc');if(d)d.open=true}
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){openFor(a.getAttribute('href'))})});
 openFor(location.hash);
@@ -1193,7 +1188,7 @@ document.querySelectorAll('.flow').forEach(function(f){
   function resume(){if(canMove()&&!raf)raf=requestAnimationFrame(tick);else if(!canMove())stop()}
   if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;resume()}).observe(f)}else{visible=true;resume()}
   motion.addEventListener('change',resume);document.addEventListener('visibilitychange',resume);
-  f.addEventListener('mouseenter',function(){hover=true;resume()});f.addEventListener('mouseleave',function(){hover=false;resume()});
+  f.addEventListener('mouseleave',function(){hover=false;resume()});
   f.addEventListener('focus',resume);f.addEventListener('blur',resume);
   f.addEventListener('wheel',function(){pauseUntil=performance.now()+3000},{passive:true});
   f.addEventListener('pointerdown',function(e){if(e.button!==0)return;drag=true;startX=e.clientX;startScroll=f.scrollLeft;f.classList.add('drag');f.setPointerCapture(e.pointerId);resume()});
